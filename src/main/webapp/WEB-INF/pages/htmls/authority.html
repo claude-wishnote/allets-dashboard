@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!--
+BeyondAdmin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.4
+Version: 1.4.1
+Purchase: http://wrapbootstrap.com
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Head -->
+<head>
+    <meta charset="utf-8"/>
+    <title>Allets UMS</title>
+
+    <meta name="description" content="alerts"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="shortcut icon" href="/img/allets.ico" type="image/x-icon">
+
+    <!--Basic Styles-->
+    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+    <link id="bootstrap-rtl-link" href="" rel="stylesheet"/>
+    <link href="/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="/css/weather-icons.min.css" rel="stylesheet"/>
+
+    <!--Alletsadmin Styles-->
+    <link href="/css/allets-admin.css" rel="stylesheet"/>
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300"
+          rel="stylesheet" type="text/css">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="/css/beyond.min.css" rel="stylesheet"/>
+    <link href="/css/demo.min.css" rel="stylesheet"/>
+    <link href="/css/typicons.min.css" rel="stylesheet"/>
+    <link href="/css/animate.min.css" rel="stylesheet"/>
+    <link id="skin-link" href="" rel="stylesheet" type="text/css"/>
+
+    <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+    <script src="/js/skins.min.js"></script>
+
+</head>
+<!-- /Head -->
+<!-- Body -->
+<body>
+<!-- Loading Container -->
+<div class="loading-container">
+    <div class="loader"></div>
+</div>
+<!--  /Loading Container -->
+<!-- Navbar -->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="navbar-container">
+            <!-- Navbar Barnd -->
+            <div class="navbar-header pull-left">
+                <a href="##" class="navbar-brand">
+                    <small>
+                        Allets UMS
+                    </small>
+                </a>
+            </div>
+            <!-- /Navbar Barnd -->
+            <!-- Sidebar Collapse -->
+            <div class="sidebar-collapse" id="sidebar-collapse">
+                <i class="collapse-icon fa fa-bars"></i>
+            </div>
+            <!-- /Sidebar Collapse -->
+        </div>
+    </div>
+</div>
+<!-- /Navbar -->
+<!-- Main Container -->
+<div class="main-container container-fluid">
+    <!-- Page Container -->
+    <div class="page-container">
+        <!-- Page Sidebar -->
+        <div class="page-sidebar" id="sidebar">
+            <!-- Sidebar Menu -->
+            <ul id="layoutMenu" class="nav sidebar-menu">
+                <!--menu list-->
+                <li id="itemRule">
+                    <a href="##" class="menu-dropdown">
+                        <i class="menu-icon fa fa-desktop"></i>
+                        <span class="menu-text">모니터링 기준</span>
+                        <i class="menu-expand"></i>
+                    </a>
+                    <!--sub menu-->
+                    <ul class="submenu" id="submenuItemRule">
+                        <li id="subitemRule">
+                            <a href="##">
+                                <span class="menu-text">모니터링 검수 근거</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!--//sub menu-->
+                </li>
+                <!--//menu list-->
+                <li id="itemReported"><!--as-is-->
+                    <a href="##" class="menu-dropdown">
+                        <i class="menu-icon fa fa-pencil-square-o"></i>
+                        <span class="menu-text">신고관리</span>
+
+                        <i class="menu-expand"></i>
+                    </a>
+                    <!-- add this,animation will be ok -->
+                    <ul class="submenu" id="submenuItemReported">
+                        <li id="subitemReportedComments">
+                            <a href="##">
+                                <span class="menu-text">신고조회 - 댓글</span>
+                            </a>
+                        </li>
+                        <li id="subitemReportedUser">
+                            <a href="##">
+                                <span class="menu-text">신고조회 - 계정</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="itemHandled">
+                    <a href="##" class="menu-dropdown">
+                        <i class="menu-icon glyphicon glyphicon-tasks"></i>
+                        <span class="menu-text">처리내역 관리</span>
+
+                        <i class="menu-expand"></i>
+                    </a>
+
+                    <ul class="submenu" id="submenuItemHandled">
+                        <li id="subitemHandledComments">
+                            <a href="##">
+                                <span class="menu-text">처리조회 - 댓글</span>
+                            </a>
+                        </li>
+                        <li id="subitemHandledUsers">
+                            <a href="##">
+                                <span class="menu-text">처리조회 - 계정</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="itemCommentsMonitor">
+                    <a href="##" class="menu-dropdown">
+                        <i class="menu-icon fa fa-bar-chart-o"></i>
+                        <span class="menu-text">모니터링</span>
+
+                        <i class="menu-expand"></i>
+                    </a>
+
+                    <ul class="submenu" id="submenuItemCommentsMonitor">
+                        <li id="subitemCommentsMonitor">
+                            <a href="##">
+                                <span class="menu-text">댓글 모니터링</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="itemAccountManagement">
+                    <a href="##" class="menu-dropdown">
+                        <i class="menu-icon fa fa-pencil-square-o"></i>
+                        <span class="menu-text">계정관리</span>
+
+                        <i class="menu-expand"></i>
+                    </a>
+
+                    <ul class="submenu" id="submenuItemAccountManagement">
+                        <li id="subitemAccountManagement">
+                            <a href="##">
+                                <span class="menu-text">계정 검색</span>
+                            </a>
+                        </li>
+                        <li id="subitemBlackListManagement">
+                            <a href="##">
+                                <span class="menu-text">블랙리스트 관리</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="itemRightsManagement">
+                    <a href="##" class="menu-dropdown">
+                        <i class="menu-icon glyphicon glyphicon-link"></i>
+                        <span class="menu-text">권한관리</span>
+
+                        <i class="menu-expand"></i>
+                    </a>
+
+                    <ul class="submenu" id="submenuItemRightsManagement">
+                        <li id="subitemItemRightsManagement">
+                            <a href="##">
+                                <span class="menu-text">권한 관리</span>
+                            </a>
+                        </li>
+                        <li id="subitemIllegalWordManagement">
+                            <a href="##">
+                                <span class="menu-text">금칙어 관리</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /Page Sidebar -->
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Page Header -->
+            <div class="page-header position-relative">
+                <div class="header-title">
+                    <h1>
+                        권한 관리
+                        <small>
+                            <i class="fa fa-angle-right"></i>
+                            권한 관리
+                        </small>
+                    </h1>
+                </div>
+            </div>
+            <!-- /Page Header -->
+            <!-- Page Body -->
+            <div class="page-body" style="overflow:auto">
+                <!-- search bar-->
+                <div class="row searchbar">
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="input-id" placeholder="New ID">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default shiny" type="button" id="btn-registration">Registration
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6"></div>
+                </div>
+                <!-- /search bar-->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget">
+                            <div class="widget-body">
+                                <table class="table table-bordered mgt10 text-center" id="result-panel"
+                                       data-sort-order="desc">
+                                    <thead>
+                                    <tr>
+                                        <th>Monitor Id</th>
+                                        <th>Top Level</th>
+                                        <th>Registered Date</th>
+                                        <th>Password Change</th>
+                                        <th>Account Delete</th>
+                                        <th data-sorter="statusSorter">Condition</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Page Body -->
+        </div>
+        <!-- /Page Content -->
+    </div>
+    <!-- /Page Container -->
+    <!-- Main Container -->
+</div>
+
+<!--Small Modal Templates-->
+<div class="modal fade bs-example-modal-sm pw-layer" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="mySmallModalLabel">Change Password</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <input type="password" class="form-control input-sm" placeholder="Current password"
+                           id="input-currentpassword">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control input-sm" placeholder="New password" id="input-password">
+                    <input type="password" class="form-control input-sm mgt5" placeholder="Re-type new password"
+                           id="input-repassword">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" id="btn-save">Change Password</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!--End Small Modal Templates-->
+
+<div class="bootbox modal fade bootbox-confirm in textbox-layer" id="bootbox-confirm" tabindex="-1" role="dialog"
+     aria-hidden="false">
+    <div class="modal-dialog modal-sm">
+        <!-- contents -->
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="bootbox-body" id="bootbox-body">계정을 삭제 하시겠습니까?</div>
+            </div>
+            <div class='btn-area text-center modal-footer'>
+                <a class='btn btn-darkorange btn-sm' id="btn-del">확인</a>
+                <a class='btn btn-default btn-sm' data-dismiss="modal">취소</a></div>
+        </div>
+        <!-- /contents -->
+    </div>
+</div>
+
+<!--Basic Scripts-->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/js/jquery.cookie.min.js"></script>
+<script src="/js/datatable/jquery.dataTables.min.js"></script>
+<script src="/js/datatable/dataTables.bootstrap.min.js"></script>
+<script src="/js/umsjs/jquery.md5.js"></script>
+<script src="/js/jquery.blockUI.js"></script>
+
+<!--Beyond Scripts-->
+<script src="/js/beyond.min.js"></script>
+
+<!--Page Related Scripts-->
+<script src="/js/toastr/toastr.js"></script>
+<script src="/js/umsjs/jumper/jumper.js" charset="UTF-8"></script>
+<script src="/js/umsjs/authority/authority.js" charset="UTF-8"></script>
+
+
+</body>
+<!--  /Body -->
+</html>

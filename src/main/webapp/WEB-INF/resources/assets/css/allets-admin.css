@@ -1,0 +1,93 @@
+/*logo position*/
+div.navbar-container div.navbar-header a.navbar-brand small{display:block; padding:8px 0 0px 10px;}
+
+/*layer position*/
+th.open{position:relative;}
+.pw-layer{top:50%; margin-top:-230px;}
+.pw-layer .modal-body{border-top:1px solid #ddd; border-bottom:1px solid #ddd;}
+.textbox-layer{top:50%; margin-top:-230px;}
+.textbox-layer .bootbox-body{padding:30px 0 10px; text-align:center;}
+.textbox-layer button.close{margin-top:-10px;}
+.textbox-layer .modal-footer{text-align:center;}
+
+/*search bar*/
+.searchbar{margin-bottom:10px;}
+.searchbar .input-icon{width:50%;}
+.searchbar select{height:30px; vertical-align:middle;}
+
+/*calendar bar*/
+.calendar-bar{margin-bottom:10px; text-align:right; position:relative; height:36px; width:100%;}
+.calendar-bar select{height:30px; margin-left:10px; vertical-align:middle;}
+.calendar-bar .input-group{width:150px;}
+.calendar-box{width:180px; float:left; margin-right:15px; text-align:right;}
+.calendar-box .icon-sub-txt{margin-top:-26px; display:block;}
+.calendar-section{position:absolute; right:180px;}
+.calendar-btn{position:absolute; right:-15px;}
+
+/*margin*/
+.row .mg-grid{margin-top:30px; margin-bottom:10px;}
+.mgt5{margin-top:5px;}
+.mgt10{margin-top:10px;}
+.mgt100{margin-top:100px;}
+.btn-area{margin:10px 0 0;}
+.posi-t2{top:2px;}
+
+/*line*/
+.btm-line{border-bottom:1px solid #ddd;}
+
+/*text*/
+.text-tit{font-weight:700; margin:0 10px 0 0;}
+
+/*line-height*/
+.line-height220{line-height:220%;}
+
+/*images*/
+.profile-img{}
+
+/*table*/
+th.bg{background:#f9f9f9;}
+th a.dropdown-toggle{color:#444; cursor: pointer; text-decoration:none;}
+th div.dropdown-menu{font-weight:normal;}
+table.text-center td,table.text-center th{text-align:center; vertical-align:middle !important;}
+table th a,table th a:hover,table th a:active,table th a:visited{color:#444; text-decoration:none; text-decoration:none;}
+table th label,table td label{margin-bottom:0;}
+table th a,table td a{color:#444;}
+
+/*layer position*/
+.reset-layer{left:auto; right:300px; padding:10px;}
+
+/*layer contents*/
+.popover-content table label{margin-bottom:0; vertical-align:top; font-size:11px;}
+.popover-content .table>tbody>tr>td, .popover-content .table>tbody>tr>th, .popover-content .table>tfoot>tr>td, .popover-content .table>tfoot>tr>th, .popover-content .table>thead>tr>td, .popover-content .table>thead>tr>th{padding:3px; vertical-align:middle; font-size:11px;}
+.layer-btn-center-area{text-align:center;}
+.layer-btn-center-area a{width:70px; margin:2px 0;}
+
+/*prohibit*/
+.prohibition-box{margin-top:10px; border-top:1px solid #ddd; border-left:1px solid #ddd; border-right:1px solid #ddd;}
+.prohibition-box .widget{margin:0; position:relative; border-bottom:1px solid #ddd; padding:4px;}
+.prohibition-box .widget .widget-buttons{position:absolute; right:0; top:3px; height:auto;}
+.prohibition-box .widget .widget-buttons a{color:#777;}
+.prohibition-box .widget .widget-buttons a:hover{filter:alpha(opacity=50);-webkit-opacity:.5;-moz-opacity:.5;opacity:.5}
+.prohibition-box .widget input[type=text]{width:90%; border:none;}
+
+/*standard*/
+.standard-box h4.panel-title a{font-size:16px !important; font-weight:normal;}
+.standard-list .widget{margin:0; position:relative; border-bottom:1px solid #ddd; padding:4px; background:#eee;}
+.standard-list .widget .grade-tit{position:absolute; left:15px; top:9px;}
+.standard-list .widget .widget-buttons{position:absolute; right:10px; top:3px; height:auto;}
+.standard-list .widget .widget-buttons a{color:#777;}
+.standard-list .widget .widget-buttons a:hover{filter:alpha(opacity=50);-webkit-opacity:.5;-moz-opacity:.5;opacity:.5}
+.standard-list .widget input[type=text]{width:90%; border:none; margin-left:30px; background:none; cursor:auto;}
+.add-btn-area{position:relative; height:39px; width:100%; background:#eee; border-bottom:1px solid #ddd;}
+.add-btn-area a.btn-add{position:absolute; top:7px; right:15px; display:inline-block; border-radius:2px; padding:0 4px 2px; background:#777; color:fff;}
+.add-btn-area a.btn-add span{color:#fff;}
+.add-btn-area a.btn-add:hover{text-decoration:none; color:#fff;}
+.modal-content.standard-add{box-shadow:none; margin:-9px -14px;}
+.modal-content.standard-add .modal-footer{background:none; text-align:center; padding-top:0;}
+.modal-content.standard-add .modal-footer button{font-size:11px;}
+
+/*right-side-bar*/
+
+.right-side-bar {width: 66px;position: fixed;bottom: 10px;right: 20px;font-size: 0;line-height: 0;z-index: 100;}
+.right-side-bar a {width: 66px;height: 66px;display: inline-block;background-color: #ddd;margin-bottom: 2px;}
+.right-side-bar a:hover {background-color: #669fdd;}

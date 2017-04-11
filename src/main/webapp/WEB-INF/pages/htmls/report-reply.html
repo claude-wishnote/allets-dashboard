@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!--
+BeyondAdmin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.4
+Version: 1.4.1
+Purchase: http://wrapbootstrap.com
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Head -->
+<head>
+    <meta charset="utf-8"/>
+    <title>Allets UMS</title>
+
+    <meta name="description" content="alerts"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="shortcut icon" href="/img/allets.ico" type="image/x-icon">
+
+    <!--Basic Styles-->
+    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+    <link id="bootstrap-rtl-link" href="" rel="stylesheet"/>
+    <link href="/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="/css/weather-icons.min.css" rel="stylesheet"/>
+
+    <!--Alletsadmin Styles-->
+    <link href="/css/allets-admin.css" rel="stylesheet"/>
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300"
+          rel="stylesheet" type="text/css">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="/css/beyond.min.css" rel="stylesheet"/>
+    <link href="/css/demo.min.css" rel="stylesheet"/>
+    <link href="/css/typicons.min.css" rel="stylesheet"/>
+    <link href="/css/animate.min.css" rel="stylesheet"/>
+    <link id="skin-link" href="" rel="stylesheet" type="text/css"/>
+
+    <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+    <script src="/js/skins.min.js"></script>
+
+</head>
+<!-- /Head -->
+<!-- Body -->
+<body>
+<!-- Loading Container -->
+<div class="loading-container">
+    <div class="loader"></div>
+</div>
+<!--  /Loading Container -->
+<!-- Navbar -->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="navbar-container">
+            <!-- Navbar Barnd -->
+            <div class="navbar-header pull-left">
+                <a href="##" class="navbar-brand">
+                    <small>
+                        Allets UMS
+                    </small>
+                </a>
+            </div>
+            <!-- /Navbar Barnd -->
+            <!-- Sidebar Collapse -->
+            <div class="sidebar-collapse" id="sidebar-collapse">
+                <i class="collapse-icon fa fa-bars"></i>
+            </div>
+            <!-- /Sidebar Collapse -->
+        </div>
+    </div>
+</div>
+<!-- /Navbar -->
+<!-- Main Container -->
+<div class="main-container container-fluid">
+    <!-- Page Container -->
+    <div class="page-container">
+        <!-- Page Sidebar -->
+        <div class="page-sidebar" id="sidebar">
+            <!-- Sidebar Menu -->
+            <ul id="layoutMenu" class="nav sidebar-menu">
+                <!--menu list-->
+                <li id="itemRule">
+                    <a href="##" class="menu-dropdown">
+                        <i class="menu-icon fa fa-desktop"></i>
+                        <span class="menu-text">모니터링 기준</span>
+                        <i class="menu-expand"></i>
+                    </a>
+                    <!--sub menu-->
+                    <ul class="submenu" id="submenuItemRule">
+                        <li id="subitemRule">
+                            <a href="##">
+                                <span class="menu-text">모니터링 검수 근거</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!--//sub menu-->
+                </li>
+                <!--//menu list-->
+                <li id="itemReported"><!--as-is-->
+                    <a href="##" class="menu-dropdown">
+                        <i class="menu-icon fa fa-pencil-square-o"></i>
+                        <span class="menu-text">신고관리</span>
+
+                        <i class="menu-expand"></i>
+                    </a>
+                    <!-- style="display: block;" add this,animation will be ok -->
+                    <ul class="submenu" id="submenuItemReported">
+                        <li id="subitemReportedComments">
+                            <a href="##">
+                                <span class="menu-text">신고조회 - 댓글</span>
+                            </a>
+                        </li>
+                        <li id="subitemReportedUser">
+                            <a href="##">
+                                <span class="menu-text">신고조회 - 계정</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="itemHandled">
+                    <a href="##" class="menu-dropdown">
+                        <i class="menu-icon glyphicon glyphicon-tasks"></i>
+                        <span class="menu-text">처리내역 관리</span>
+
+                        <i class="menu-expand"></i>
+                    </a>
+
+                    <ul class="submenu" id="submenuItemHandled">
+                        <li id="subitemHandledComments">
+                            <a href="##">
+                                <span class="menu-text">처리조회 - 댓글</span>
+                            </a>
+                        </li>
+                        <li id="subitemHandledUsers">
+                            <a href="##">
+                                <span class="menu-text">처리조회 - 계정</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="itemCommentsMonitor">
+                    <a href="##" class="menu-dropdown">
+                        <i class="menu-icon fa fa-bar-chart-o"></i>
+                        <span class="menu-text">모니터링</span>
+
+                        <i class="menu-expand"></i>
+                    </a>
+
+                    <ul class="submenu" id="submenuItemCommentsMonitor">
+                        <li id="subitemCommentsMonitor">
+                            <a href="##">
+                                <span class="menu-text">댓글 모니터링</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="itemAccountManagement">
+                    <a href="##" class="menu-dropdown">
+                        <i class="menu-icon fa fa-pencil-square-o"></i>
+                        <span class="menu-text">계정관리</span>
+
+                        <i class="menu-expand"></i>
+                    </a>
+
+                    <ul class="submenu" id="submenuItemAccountManagement">
+                        <li id="subitemAccountManagement">
+                            <a href="##">
+                                <span class="menu-text">계정 검색</span>
+                            </a>
+                        </li>
+                        <li id="subitemBlackListManagement">
+                            <a href="##">
+                                <span class="menu-text">블랙리스트 관리</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="itemRightsManagement">
+                    <a href="##" class="menu-dropdown">
+                        <i class="menu-icon glyphicon glyphicon-link"></i>
+                        <span class="menu-text">권한관리</span>
+
+                        <i class="menu-expand"></i>
+                    </a>
+
+                    <ul class="submenu" id="submenuItemRightsManagement">
+                        <li id="subitemItemRightsManagement">
+                            <a href="##">
+                                <span class="menu-text">권한 관리</span>
+                            </a>
+                        </li>
+                        <li id="subitemIllegalWordManagement">
+                            <a href="##">
+                                <span class="menu-text">금칙어 관리</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /Page Sidebar -->
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Page Header -->
+            <div class="page-header position-relative">
+                <div class="header-title">
+                    <h1>
+                        신고 관리
+                        <small>
+                            <i class="fa fa-angle-right"></i>
+                            신고 조회 - 댓글
+                        </small>
+                    </h1>
+                </div>
+            </div>
+            <!-- /Page Header -->
+            <!-- Page Body -->
+            <div class="page-body" style="overflow:auto">
+                <!-- search bar-->
+                <div class="row searchbar">
+                    <div class="col-sm-3">
+                        <select id="reportedCommentLimit">
+                            <option value="15">15</option>
+                            <option value="30"  selected = "selected">30</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-9 text-right">
+                        <select id="reportedCommentSearchField">
+                            <option value="nickname">닉네임</option>
+                            <option value="email">이메일</option>
+                            <option value="keyword">키워드(금칙어)</option>
+                        </select>
+                        <span class="input-icon">
+                            <input type="text" class="form-control input-sm" id="reportedCommentSearchKeyword">
+                            <i class="btn btn-sm glyphicon glyphicon-search blue" id="reportedCommentSearchButton"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- /search bar-->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget">
+                            <div class="widget-body">
+                                <!-- data table -->
+                                <table id="reportedCommentTable"
+                                       class="table table-hover table-striped table-bordered text-center">
+                                    <!--<colgroup>-->
+                                    <!--<col width="5%" />-->
+                                    <!--<col width="8%" />-->
+                                    <!--<col width="7%" />-->
+                                    <!--<col width="9%" />-->
+                                    <!--<col width="15%" />-->
+                                    <!--<col width="7%" />-->
+                                    <!--<col width="7%" />-->
+                                    <!--<col width="9%" />-->
+                                    <!--<col width="9%" />-->
+                                    <!--<col width="9%" />-->
+                                    <!--<col width="7%" />-->
+                                    <!--<col width="8%" />-->
+                                    <!--</colgroup>-->
+                                    <thead>
+                                    <tr>
+                                        <th>
+                                            <label>
+                                                <input type="checkbox" id="totalChecked">
+                                                <span class="text"></span>
+                                            </label>
+                                        </th>
+                                        <th>Register  time</th>
+                                        <th>Report  count</th>
+                                        <th>Nickname</th>
+                                        <th>Comment text</th>
+                                        <th>Like  count</th>
+                                        <th>Recomment  count</th>
+                                        <th>Comment  type</th>
+                                        <th>Report type</th>
+                                        <th>Comment id</th>
+                                        <th>Slang type</th>
+                                        <th>Condition</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <!--loop-->
+                                    </tbody>
+                                </table>
+                                <!-- /data table -->
+                            </div>
+                            <!-- button -->
+                            <div class="text-left mgt10">
+                                <button id="passAllComment" class="btn btn-default btn-sm"><span
+                                        class="glyphicon glyphicon-ok"></span>선택 패스
+                                </button>
+                                <button id="blindAllComment" class="btn btn-info btn-sm"><span
+                                        class="glyphicon glyphicon-minus"></span>선택 블라인드
+                                </button>
+                                <button id="deleteAllComment" class="btn btn-danger btn-sm"><span
+                                        class="glyphicon glyphicon-remove posi-t2"></span>선택 삭제
+                                </button>
+                            </div>
+                            <!-- /button -->
+                            <!-- paging -->
+                            <div class="text-center mgt10">
+                                <ul class="pagination" id="pager">
+                                    <!--<li class="disabled"><a href="##">«</a></li>-->
+                                    <!--<li class="active"><a href="##">1 <span class="sr-only">(current)</span></a></li>-->
+                                    <!--<li><a href="##">»</a></li>-->
+                                </ul>
+                            </div>
+                            <!-- /paging -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Page Body -->
+        </div>
+        <!-- /Page Content -->
+    </div>
+    <!-- /Page Container -->
+    <!-- Main Container -->
+</div>
+<div class="modal fade text-center" id="myModal" tabindex="-1" role="dialog" aria-labelledby="commentContextLable"
+     aria-hidden="false">
+    <div class="modal-dialog bg-gray" style="display: inline-block; width: auto;">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="
+                ">Comment Context</h4>
+            </div>
+            <div class="modal-body no-border col-sm-12" style="max-width:800px;max-height: 600px">
+                <div class="col-sm-6" style="width: 380px;height: 560px;margin-right: 10px">
+                    <!--<iframe id="alletsHtml" hidden="true" frameBorder="0"-->
+                    <!--class="bordered-top-1 bordered-bottom-1 bordered-right-1 bordered-left-1 bordered-black"-->
+                    <!--style="width: 800px;height: 600px"></iframe>-->
+                    <div class="widget-header bordered-bottom-1 bordered-top bordered-info" style="width: 380px" >
+                        <i class="widget-icon fa fa-tags info"></i>
+                        <span id="alletsType" class="widget-caption info"> </span>
+                    </div>
+                    <a id="alletsUrl"  target="_blank" ></a>
+                </div>
+                <div id="commentContext" class="col-sm-6" style="width: 380px;height: 560px;overflow:auto">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+</div>
+<!--Basic Scripts-->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/js/jquery.blockUI.js"></script>
+<script src="/js/jquery.cookie.min.js"></script>
+
+<!--Beyond Scripts-->
+<script src="/js/beyond.min.js"></script>
+
+<!--Page Related Scripts-->
+<script src="/js/toastr/toastr.js"></script>
+
+<script src="/js/datatable/jquery.dataTables.min.js"></script>
+<script src="/js/datatable/ZeroClipboard.js"></script>
+<!--<script src="/js/datatable/dataTables.tableTools.min.js"></script>-->
+<script src="/js/datatable/dataTables.bootstrap.min.js"></script>
+
+
+<script src="/js/umsjs/comment/reportedComment.js" charset=“UTF-8”></script>
+<script src="/js/umsjs/comment/commentContext.js" charset=“UTF-8”></script>
+<script src="/js/umsjs/pager/pager.js" charset=“UTF-8”></script>
+<script src="/js/umsjs/jumper/jumper.js" charset=“UTF-8”></script>
+
+</body>
+<!--  /Body -->
+</html>

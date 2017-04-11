@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+	<contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+		<resetJUL>true</resetJUL>
+	</contextListener>
+
+	<!-- To enable JMX Management -->
+	<jmxConfigurator />
+
+	<!-- http://logback.qos.ch/manual/layouts.html -->
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%class %date %level - %message%n</pattern>
+		</encoder>
+	</appender>
+	
+	
+	<!-- package log level -->
+	<!-- log4jdbc (jdbc.resultset,jdbc.sqlonly,jdbc.sqltiming,jdbc.audit,jdbc.connection) -->
+  	<logger name="jdbc.resultset" level="WARN" additivity="false"/>
+  	<logger name="jdbc.connection" level="WARN" additivity="false"/>
+  	<logger name="jdbc.audit" level="WARN" additivity="false"/>
+  	<logger name="jdbc.sqltiming" level="WARN" additivity="false"/>
+  	<!-- <logger name="org.springframework" level="WARN" additivity="false"/> -->
+  	
+	<root level="info">
+		<appender-ref ref="console" />
+	</root>
+
+</configuration>

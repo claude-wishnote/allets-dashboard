@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE tiles-definitions PUBLIC  
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="tutorial/emp/noLayout" template="/WEB-INF/layout/noLayout.jsp">
+		<put-attribute name="body" 		value="/WEB-INF/pages/tutorial/emp/noLayout.jsp" />
+	</definition>
+    
+    <definition name="errors/defaultError" template="/WEB-INF/layout/noLayout.jsp">
+		<put-attribute name="body" 		value="/WEB-INF/pages/errors/defaultError.jsp" />
+	</definition>
+	
+		
+</tiles-definitions>
