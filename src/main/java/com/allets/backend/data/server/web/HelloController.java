@@ -39,7 +39,7 @@ public class HelloController {
     @RequestMapping(value = "", method = RequestMethod.GET)
     public ModelAndView indexPage(HttpServletRequest request,
                                   HttpServletResponse response) throws Exception {
-        ModelAndView mav = new ModelAndView("/ums/login");
+        ModelAndView mav = new ModelAndView("/data/login");
         return mav;
     }
 
@@ -50,17 +50,50 @@ public class HelloController {
         return mav;
     }
 
+    @RequestMapping(value = "/contentView", method = RequestMethod.GET)
+    public ModelAndView contentView(HttpServletRequest request,
+                                    HttpServletResponse response) throws Exception {
+        MonitorDTO monitorDTO = securityFacade.getAuthenticatedMonitor();
+        if (monitorDTO == null) {
+            return new ModelAndView("/data/login");
+        }
+        ModelAndView mav = new ModelAndView("/data/content-view");
+        return mav;
+    }
+
+    @RequestMapping(value = "/editorView", method = RequestMethod.GET)
+    public ModelAndView editorView(HttpServletRequest request,
+                                    HttpServletResponse response) throws Exception {
+        MonitorDTO monitorDTO = securityFacade.getAuthenticatedMonitor();
+        if (monitorDTO == null) {
+            return new ModelAndView("/data/login");
+        }
+        ModelAndView mav = new ModelAndView("/data/editor-view");
+        return mav;
+    }
+
+    @RequestMapping(value = "/userInformation", method = RequestMethod.GET)
+    public ModelAndView userInformation(HttpServletRequest request,
+                                   HttpServletResponse response) throws Exception {
+        MonitorDTO monitorDTO = securityFacade.getAuthenticatedMonitor();
+        if (monitorDTO == null) {
+            return new ModelAndView("/data/login");
+        }
+        ModelAndView mav = new ModelAndView("/data/registered-user-information");
+        return mav;
+    }
+
     @RequestMapping(value = "/accountInfo", method = RequestMethod.GET)
     public ModelAndView accountInfo(HttpServletRequest request,
                                     HttpServletResponse response) throws Exception {
         MonitorDTO monitorDTO = securityFacade.getAuthenticatedMonitor();
         if (monitorDTO == null) {
-            return new ModelAndView("/ums/login");
+            return new ModelAndView("/data/login");
         }
         if (monitorDTO.getLevel().equals(Level.CS)) {
-            return new ModelAndView("/ums/account2");
+            return new ModelAndView("/data/account2");
         }
-        ModelAndView mav = new ModelAndView("/ums/account");
+        ModelAndView mav = new ModelAndView("/data/account");
         return mav;
     }
 
@@ -69,14 +102,14 @@ public class HelloController {
                                       HttpServletResponse response) throws Exception {
         MonitorDTO monitorDTO = securityFacade.getAuthenticatedMonitor();
         if (monitorDTO == null) {
-            return new ModelAndView("/ums/login");
+            return new ModelAndView("/data/login");
         }
         if (monitorDTO.getLevel().equals(Level.CS)) {
-            return new ModelAndView("/ums/account2");
+            return new ModelAndView("/data/account2");
         } else if (monitorDTO.getLevel().equals(Level.ADMIN)) {
-            return new ModelAndView("/ums/account3");
+            return new ModelAndView("/data/account3");
         } else {
-            return new ModelAndView("/ums/account");
+            return new ModelAndView("/data/account");
         }
     }
 
@@ -85,15 +118,15 @@ public class HelloController {
                                  HttpServletResponse response) throws Exception {
         MonitorDTO monitorDTO = securityFacade.getAuthenticatedMonitor();
         if (monitorDTO == null) {
-            return new ModelAndView("/ums/login");
+            return new ModelAndView("/data/login");
         }
         if (monitorDTO.getLevel().equals(Level.CS)) {
-            return new ModelAndView("/ums/account2");
+            return new ModelAndView("/data/account2");
         }
         if (monitorDTO.getLevel().equals(Level.NORMAL)) {
-            return new ModelAndView("/ums/authority2");
+            return new ModelAndView("/data/authority2");
         }
-        ModelAndView mav = new ModelAndView("/ums/authority");
+        ModelAndView mav = new ModelAndView("/data/authority");
         return mav;
     }
 
@@ -102,12 +135,12 @@ public class HelloController {
                                 HttpServletResponse response) throws Exception {
         MonitorDTO monitorDTO = securityFacade.getAuthenticatedMonitor();
         if (monitorDTO == null) {
-            return new ModelAndView("/ums/login");
+            return new ModelAndView("/data/login");
         }
         if (monitorDTO.getLevel().equals(Level.CS)) {
-            return new ModelAndView("/ums/account2");
+            return new ModelAndView("/data/account2");
         }
-        ModelAndView mav = new ModelAndView("/ums/authority2");
+        ModelAndView mav = new ModelAndView("/data/authority2");
         return mav;
     }
 
@@ -116,12 +149,12 @@ public class HelloController {
                                   HttpServletResponse response) throws Exception {
         MonitorDTO monitorDTO = securityFacade.getAuthenticatedMonitor();
         if (monitorDTO == null) {
-            return new ModelAndView("/ums/login");
+            return new ModelAndView("/data/login");
         }
         if (monitorDTO.getLevel().equals(Level.CS)) {
-            return new ModelAndView("/ums/account2");
+            return new ModelAndView("/data/account2");
         }
-        ModelAndView mav = new ModelAndView("/ums/blacklist");
+        ModelAndView mav = new ModelAndView("/data/blacklist");
         return mav;
     }
 
@@ -130,12 +163,12 @@ public class HelloController {
                                        HttpServletResponse response) throws Exception {
         MonitorDTO monitorDTO = securityFacade.getAuthenticatedMonitor();
         if (monitorDTO == null) {
-            return new ModelAndView("/ums/login");
+            return new ModelAndView("/data/login");
         }
         if (monitorDTO.getLevel().equals(Level.CS)) {
-            return new ModelAndView("/ums/account2");
+            return new ModelAndView("/data/account2");
         }
-        ModelAndView mav = new ModelAndView("/ums/disposal-account");
+        ModelAndView mav = new ModelAndView("/data/disposal-account");
         return mav;
     }
 
@@ -144,12 +177,12 @@ public class HelloController {
                                        HttpServletResponse response) throws Exception {
         MonitorDTO monitorDTO = securityFacade.getAuthenticatedMonitor();
         if (monitorDTO == null) {
-            return new ModelAndView("/ums/login");
+            return new ModelAndView("/data/login");
         }
         if (monitorDTO.getLevel().equals(Level.CS)) {
-            return new ModelAndView("/ums/account2");
+            return new ModelAndView("/data/account2");
         }
-        ModelAndView mav = new ModelAndView("/ums/disposal-reply");
+        ModelAndView mav = new ModelAndView("/data/disposal-reply");
         return mav;
     }
 
@@ -158,12 +191,12 @@ public class HelloController {
                                     HttpServletResponse response) throws Exception {
         MonitorDTO monitorDTO = securityFacade.getAuthenticatedMonitor();
         if (monitorDTO == null) {
-            return new ModelAndView("/ums/login");
+            return new ModelAndView("/data/login");
         }
         if (monitorDTO.getLevel().equals(Level.CS)) {
-            return new ModelAndView("/ums/account2");
+            return new ModelAndView("/data/account2");
         }
-        ModelAndView mav = new ModelAndView("/ums/reply-watch");
+        ModelAndView mav = new ModelAndView("/data/reply-watch");
         return mav;
     }
 
@@ -172,12 +205,12 @@ public class HelloController {
                                          HttpServletResponse response) throws Exception {
         MonitorDTO monitorDTO = securityFacade.getAuthenticatedMonitor();
         if (monitorDTO == null) {
-            return new ModelAndView("/ums/login");
+            return new ModelAndView("/data/login");
         }
         if (monitorDTO.getLevel().equals(Level.CS)) {
-            return new ModelAndView("/ums/account2");
+            return new ModelAndView("/data/account2");
         }
-        ModelAndView mav = new ModelAndView("/ums/report-account");
+        ModelAndView mav = new ModelAndView("/data/report-account");
         return mav;
     }
 
@@ -186,12 +219,12 @@ public class HelloController {
                                         HttpServletResponse response) throws Exception {
         MonitorDTO monitorDTO = securityFacade.getAuthenticatedMonitor();
         if (monitorDTO == null) {
-            return new ModelAndView("/ums/login");
+            return new ModelAndView("/data/login");
         }
         if (monitorDTO.getLevel().equals(Level.CS)) {
-            return new ModelAndView("/ums/account2");
+            return new ModelAndView("/data/account2");
         }
-        ModelAndView mav = new ModelAndView("/ums/report-reply");
+        ModelAndView mav = new ModelAndView("/data/report-reply");
         return mav;
     }
 
@@ -200,12 +233,12 @@ public class HelloController {
                                     HttpServletResponse response) throws Exception {
         MonitorDTO monitorDTO = securityFacade.getAuthenticatedMonitor();
         if (monitorDTO == null) {
-            return new ModelAndView("/ums/login");
+            return new ModelAndView("/data/login");
         }
         if (monitorDTO.getLevel().equals(Level.CS)) {
-            return new ModelAndView("/ums/standard2");
+            return new ModelAndView("/data/standard2");
         }
-        ModelAndView mav = new ModelAndView("/ums/standard");
+        ModelAndView mav = new ModelAndView("/data/standard");
         return mav;
     }
 
@@ -214,12 +247,12 @@ public class HelloController {
                                    HttpServletResponse response) throws Exception {
         MonitorDTO monitorDTO = securityFacade.getAuthenticatedMonitor();
         if (monitorDTO == null) {
-            return new ModelAndView("/ums/login");
+            return new ModelAndView("/data/login");
         }
         if (monitorDTO.getLevel().equals(Level.CS)) {
-            return new ModelAndView("/ums/account2");
+            return new ModelAndView("/data/account2");
         }
-        ModelAndView mav = new ModelAndView("/ums/prohibition");
+        ModelAndView mav = new ModelAndView("/data/prohibition");
         return mav;
     }
 
@@ -228,12 +261,12 @@ public class HelloController {
                                           HttpServletResponse response) throws Exception {
         MonitorDTO monitorDTO = securityFacade.getAuthenticatedMonitor();
         if (monitorDTO == null) {
-            return new ModelAndView("/ums/login");
+            return new ModelAndView("/data/login");
         }
         if (monitorDTO.getLevel().equals(Level.CS)) {
-            return new ModelAndView("/ums/account2");
+            return new ModelAndView("/data/account2");
         }
-        ModelAndView mav = new ModelAndView("/ums/monitor-statistics");
+        ModelAndView mav = new ModelAndView("/data/monitor-statistics");
         return mav;
     }
 

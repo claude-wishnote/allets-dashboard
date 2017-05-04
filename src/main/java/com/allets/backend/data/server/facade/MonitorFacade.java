@@ -1,7 +1,6 @@
 package com.allets.backend.data.server.facade;
 
-import com.allets.backend.data.server.data.result.MonitorStatistics;
-import com.allets.backend.data.server.entity.common.Monitor;
+ import com.allets.backend.data.server.entity.common.Monitor;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 import java.util.List;
@@ -33,9 +32,6 @@ public interface MonitorFacade {
 
     void modifyMonitorForceResetPassword(Monitor monitor) throws Exception;
 
-    List<MonitorStatistics> findMonitorHandleHistory(String monitorIds,String q) throws Exception;
-
     void modifyMonitorLastLoginTime(Long monitorId) throws Exception;
 
-    HSSFWorkbook findStatistics(String q) throws Exception;
 }

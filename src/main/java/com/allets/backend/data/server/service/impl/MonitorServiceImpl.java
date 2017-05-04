@@ -4,7 +4,6 @@ package com.allets.backend.data.server.service.impl;
 import com.allets.backend.data.server.exception.FailureException;
 import com.allets.backend.data.server.utils.JsonUtil;
 import com.allets.backend.data.server.consts.Const;
-import com.allets.backend.data.server.data.result.MonitorStatistics;
 import com.allets.backend.data.server.entity.common.Monitor;
 import com.allets.backend.data.server.repository.common.MonitorRepository;
 import com.allets.backend.data.server.service.MonitorService;
@@ -92,18 +91,7 @@ public class MonitorServiceImpl implements MonitorService {
     }
 
     @Override
-    public List<MonitorStatistics> selectMonitorHandleHistory(String monitorIds, String q) throws Exception {
-        System.err.println(monitorIds);
-        return monitorRepository.findUserHandleHistory(monitorIds, q);
-    }
-
-    @Override
     public void updateMonitorLastLoginTime(Long monitorId) throws Exception {
         monitorRepository.updateMonitorLastLoginTime(monitorId);
-    }
-
-    @Override
-    public HSSFWorkbook selectStatistics(String q) throws Exception {
-        return monitorRepository.findStatistics(q);
     }
 }

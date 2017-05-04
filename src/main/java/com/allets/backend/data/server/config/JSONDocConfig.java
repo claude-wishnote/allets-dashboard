@@ -22,7 +22,7 @@ public class JSONDocConfig {
 
     @Value("${service.basePath}")
     private String basePath;
-    private List<String> packages = Arrays.asList("com.allets.backend.ums.server.web", "com.allets.backend.ums.server.data", "com.allets.backend.ums.server.entity.common");
+    private List<String> packages = Arrays.asList("com.allets.backend.data.server.web", "com.allets.backend.data.server.data", "com.allets.backend.data.server.entity.common");
 
 
     @Bean

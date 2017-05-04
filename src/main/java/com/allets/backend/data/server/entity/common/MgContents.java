@@ -44,7 +44,6 @@ public class MgContents  implements java.io.Serializable {
      private String coverSourceUrl;
      private Date fdate;
      private String thumbnailBestUrl;
-     private Set<BestContentsResult> bestContentsResults = new HashSet<BestContentsResult>(0);
 
     public MgContents() {
     }
@@ -57,7 +56,7 @@ public class MgContents  implements java.io.Serializable {
         this.viewCount = viewCount;
         this.logDetail = logDetail;
     }
-    public MgContents(User user, String status, Date udate, String title, String description, String thumbnailUrl, String coverUrl, String headlineUrl, String bgmSource, String bgmText, byte vertical, Date cdate, String contentsType, int viewCount, Date edate, byte logDetail, String originalText, String originalUrl, String thumbnailSourceText, String thumbnailSourceUrl, String coverSourceText, String coverSourceUrl, Date fdate, String thumbnailBestUrl, Set<BestContentsResult> bestContentsResults) {
+    public MgContents(User user, String status, Date udate, String title, String description, String thumbnailUrl, String coverUrl, String headlineUrl, String bgmSource, String bgmText, byte vertical, Date cdate, String contentsType, int viewCount, Date edate, byte logDetail, String originalText, String originalUrl, String thumbnailSourceText, String thumbnailSourceUrl, String coverSourceText, String coverSourceUrl, Date fdate, String thumbnailBestUrl) {
        this.user = user;
        this.status = status;
        this.udate = udate;
@@ -82,8 +81,7 @@ public class MgContents  implements java.io.Serializable {
        this.coverSourceUrl = coverSourceUrl;
        this.fdate = fdate;
        this.thumbnailBestUrl = thumbnailBestUrl;
-       this.bestContentsResults = bestContentsResults;
-    }
+     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
     
@@ -311,15 +309,6 @@ public class MgContents  implements java.io.Serializable {
     public void setThumbnailBestUrl(String thumbnailBestUrl) {
         this.thumbnailBestUrl = thumbnailBestUrl;
     }
-@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="mgContents")
-    public Set<BestContentsResult> getBestContentsResults() {
-        return this.bestContentsResults;
-    }
-    
-    public void setBestContentsResults(Set<BestContentsResult> bestContentsResults) {
-        this.bestContentsResults = bestContentsResults;
-    }
-
 
     @Override
     public String toString() {
@@ -349,8 +338,7 @@ public class MgContents  implements java.io.Serializable {
                 ", coverSourceUrl='" + coverSourceUrl + '\'' +
                 ", fdate=" + fdate +
                 ", thumbnailBestUrl='" + thumbnailBestUrl + '\'' +
-                ", bestContentsResults=" + bestContentsResults +
-                '}';
+                 '}';
     }
 }
 

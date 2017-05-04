@@ -18,23 +18,23 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@EnableJpaRepositories(basePackages = { "com.allets.backend.ums.server.repository.common" }, entityManagerFactoryRef = "commonEntityManagerFactory", transactionManagerRef = "commonTxManager")
+@EnableJpaRepositories(basePackages = { "com.allets.backend.data.server.repository.common" }, entityManagerFactoryRef = "commonEntityManagerFactory", transactionManagerRef = "commonTxManager")
 @EnableTransactionManagement
 public class JPAConfig {
 
-	@Value("${backend.ums.common.jpa.entity.package}")
+	@Value("${backend.data.common.jpa.entity.package}")
 	String entityPackage;
 
-	@Value("${backend.ums.hibernate.dialect.mysql}")
+	@Value("${backend.data.hibernate.dialect.mysql}")
 	String dialect;
 
-	@Value("${backend.ums.common.jpa.unit}")
+	@Value("${backend.data.common.jpa.unit}")
 	String commonJpaUnit;
 
-	@Value("${backend.ums.common.jpa.hbm2ddl.auto}")
+	@Value("${backend.data.common.jpa.hbm2ddl.auto}")
 	String commonHbm2ddlAuto;
 
-	@Value("${backend.ums.common.show.sql}")
+	@Value("${backend.data.common.show.sql}")
 	String commonShowSql;
 
 	@Bean

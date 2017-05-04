@@ -1,6 +1,5 @@
 package com.allets.backend.data.server.facade.impl;
 
-import com.allets.backend.data.server.data.result.MonitorStatistics;
 import com.allets.backend.data.server.entity.common.Monitor;
 import com.allets.backend.data.server.facade.MonitorFacade;
 import com.allets.backend.data.server.service.MonitorService;
@@ -61,19 +60,10 @@ public class MonitorFacadeImpl implements MonitorFacade {
 
     }
 
-    @Override
-    public List<MonitorStatistics> findMonitorHandleHistory(String monitorIds, String q) throws Exception {
-        return monitorService.selectMonitorHandleHistory(monitorIds,q);
-    }
-
     @Transactional(value = "commonTxManager")
     @Override
     public void modifyMonitorLastLoginTime(Long monitorId) throws Exception {
         monitorService.updateMonitorLastLoginTime(monitorId);
     }
 
-    @Override
-    public HSSFWorkbook findStatistics(String q) throws Exception {
-        return monitorService.selectStatistics(q);
-    }
 }

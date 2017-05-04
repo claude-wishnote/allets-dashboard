@@ -31,77 +31,77 @@ public class DatasourceConfig {
 	/**
 	 * The Mysql driver.
 	 */
-	@Value("${backend.ums.mysql.driver}")
+	@Value("${backend.data.mysql.driver}")
 	String mysqlDriver;
 
 	/**
 	 * The Default auto commit.
 	 */
-	@Value("${backend.ums.db.auto.commit}")
+	@Value("${backend.data.db.auto.commit}")
 	String defaultAutoCommit;
 
 	/**
 	 * The Common write dBURL.
 	 */
-	@Value("${backend.ums.common.db.url}")
+	@Value("${backend.data.common.db.url}")
 	String commonDBURL;
-	@Value("${backend.ums.common.db.user}")
+	@Value("${backend.data.common.db.user}")
 	String commonDBUser;
-	@Value("${backend.ums.common.db.password}")
+	@Value("${backend.data.common.db.password}")
 	String commonDBPassword;
-	@Value("${backend.ums.common.db.initialsize}")
+	@Value("${backend.data.common.db.initialsize}")
 	String commonInitalSize;
-	@Value("${backend.ums.common.db.maxtotal}")
+	@Value("${backend.data.common.db.maxtotal}")
 	String commonMaxTotal;
-	@Value("${backend.ums.common.db.maxidle}")
+	@Value("${backend.data.common.db.maxidle}")
 	String commonMaxIdle;
-	@Value("${backend.ums.common.db.minidle}")
+	@Value("${backend.data.common.db.minidle}")
 	String commonMinIdle;
-    @Value("${backend.ums.common.db.validationQuery}")
+    @Value("${backend.data.common.db.validationQuery}")
     String commonValidationQuery;
-    @Value("${backend.ums.common.db.testOnBorrow}")
+    @Value("${backend.data.common.db.testOnBorrow}")
     Boolean commonTestOnBorrow;
-	//@Value("${backend.ums.common.db.minevictableidletime}")
+	//@Value("${backend.data.common.db.minevictableidletime}")
 	//String commonMinEvictableIdleTime;
-	@Value("${backend.ums.common.db.timeBetweenEvictionRunsMillis}")
+	@Value("${backend.data.common.db.timeBetweenEvictionRunsMillis}")
 	String commonTimeBetweenEvictionRunsMillis;
-	@Value("${backend.ums.common.db.removeAbandoned}")
+	@Value("${backend.data.common.db.removeAbandoned}")
 	String commonRemoveAbandoned;
-	@Value("${backend.ums.common.db.removeAbandonedTimeout}")
+	@Value("${backend.data.common.db.removeAbandonedTimeout}")
 	String commonRemoveAbandonedTimeout;
-	@Value("${backend.ums.common.db.logAbandoned}")
+	@Value("${backend.data.common.db.logAbandoned}")
 	String commonLogAbandoned;
 
 	/**
 	 *  read dBURL.
 	 */
-	@Value("${backend.ums.read.db.url}")
+	@Value("${backend.data.read.db.url}")
 	String readDBURL;
-	@Value("${backend.ums.read.db.user}")
+	@Value("${backend.data.read.db.user}")
 	String readDBUser;
-	@Value("${backend.ums.read.db.password}")
+	@Value("${backend.data.read.db.password}")
 	String readDBPassword;
-	@Value("${backend.ums.read.db.initialsize}")
+	@Value("${backend.data.read.db.initialsize}")
 	String readInitalSize;
-	@Value("${backend.ums.read.db.maxtotal}")
+	@Value("${backend.data.read.db.maxtotal}")
 	String readMaxTotal;
-	@Value("${backend.ums.read.db.maxidle}")
+	@Value("${backend.data.read.db.maxidle}")
 	String readMaxIdle;
-	@Value("${backend.ums.read.db.minidle}")
+	@Value("${backend.data.read.db.minidle}")
 	String readMinIdle;
-    @Value("${backend.ums.read.db.validationQuery}")
+    @Value("${backend.data.read.db.validationQuery}")
     String readValidationQuery;
-    @Value("${backend.ums.read.db.testOnBorrow}")
+    @Value("${backend.data.read.db.testOnBorrow}")
     Boolean readTestOnBorrow;
-	//@Value("${backend.ums.read.db.minevictableidletime}")
+	//@Value("${backend.data.read.db.minevictableidletime}")
 	//String readMinEvictableIdleTime;
-	@Value("${backend.ums.read.db.timeBetweenEvictionRunsMillis}")
+	@Value("${backend.data.read.db.timeBetweenEvictionRunsMillis}")
 	String readTimeBetweenEvictionRunsMillis;
-	@Value("${backend.ums.read.db.removeAbandoned}")
+	@Value("${backend.data.read.db.removeAbandoned}")
 	String readRemoveAbandoned;
-	@Value("${backend.ums.read.db.removeAbandonedTimeout}")
+	@Value("${backend.data.read.db.removeAbandonedTimeout}")
 	String readRemoveAbandonedTimeout;
-	@Value("${backend.ums.read.db.logAbandoned}")
+	@Value("${backend.data.read.db.logAbandoned}")
 	String readLogAbandoned;
 	/**
 	 * common datasource

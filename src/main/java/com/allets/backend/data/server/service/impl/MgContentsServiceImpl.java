@@ -6,6 +6,7 @@ import com.allets.backend.data.server.service.MgContentsService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class MgContentsServiceImpl implements MgContentsService {
     @Autowired
     MgContentsRepository mgContentsRepository;
     @Override
-    public List<MgContentsResult> selectMgContents(String q, Integer offset, Integer limit) throws Exception {
+    public PageImpl<MgContentsResult> selectMgContents(String q, Integer offset, Integer limit) throws Exception {
         return mgContentsRepository.findMgContents(q,offset,limit);
     }
 }

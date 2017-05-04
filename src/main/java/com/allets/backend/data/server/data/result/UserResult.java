@@ -82,6 +82,15 @@ public class UserResult {
     @ApiObjectField(description = "age15plus")
     private Integer age15plus;
 
+    @ApiObjectField(description = "contentsCount")
+    private Integer contentsCount;
+    @ApiObjectField(description = "commentCount")
+    private Integer commentCount;
+    @ApiObjectField(description = "likeCount")
+    private Integer likeCount;
+
+
+
     public Long getUid() {
         return uid;
     }
@@ -314,6 +323,30 @@ public class UserResult {
         this.subscribeCount = subscribeCount;
     }
 
+    public Integer getContentsCount() {
+        return contentsCount;
+    }
+
+    public void setContentsCount(Integer contentsCount) {
+        this.contentsCount = contentsCount;
+    }
+
+    public Integer getCommentCount() {
+        return commentCount;
+    }
+
+    public void setCommentCount(Integer commentCount) {
+        this.commentCount = commentCount;
+    }
+
+    public Integer getLikeCount() {
+        return likeCount;
+    }
+
+    public void setLikeCount(Integer likeCount) {
+        this.likeCount = likeCount;
+    }
+
     @Override
     public String toString() {
         return "UserResult{" +
@@ -346,6 +379,9 @@ public class UserResult {
                 ", monitorName='" + monitorName + '\'' +
                 ", handleResult='" + handleResult + '\'' +
                 ", age15plus=" + age15plus +
+                ", contentsCount=" + contentsCount +
+                ", commentCount=" + commentCount +
+                ", likeCount=" + likeCount +
                 '}';
     }
 }

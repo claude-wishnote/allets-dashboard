@@ -1,6 +1,7 @@
 package com.allets.backend.data.server.service;
 
 import com.allets.backend.data.server.data.result.MgContentsResult;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,5 +11,5 @@ import java.util.List;
  */
 @Service
 public interface MgContentsService {
-    List<MgContentsResult> selectMgContents(String q, Integer offset, Integer limit) throws Exception;
+    PageImpl<MgContentsResult> selectMgContents(String q, Integer offset, Integer limit) throws Exception;
 }

@@ -31,7 +31,7 @@ public class RestExceptionResolver extends AbstractHandlerExceptionResolver {
      */
     static final int DEFAULT_ORDER = 0;
 
-    static final String DEFAULT_EXCEPTION_MESSAGE_KEY = "backend.ums.server.default.exception";
+    static final String DEFAULT_EXCEPTION_MESSAGE_KEY = "backend.data.server.default.exception";
 
     /**
      * The DEFAULT _ eNCODING.

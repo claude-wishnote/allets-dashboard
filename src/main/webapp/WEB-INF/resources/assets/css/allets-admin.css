@@ -21,8 +21,8 @@ th.open{position:relative;}
 .calendar-bar .input-group{width:150px;}
 .calendar-box{width:180px; float:left; margin-right:15px; text-align:right;}
 .calendar-box .icon-sub-txt{margin-top:-26px; display:block;}
-.calendar-section{position:absolute; right:180px;}
-.calendar-btn{position:absolute; right:-15px;}
+.calendar-section{ }
+.calendar-btn{position:absolute; left:380px;}
 
 /*margin*/
 .row .mg-grid{margin-top:30px; margin-bottom:10px;}

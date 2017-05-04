@@ -1,6 +1,7 @@
 package com.allets.backend.data.server.facade;
 
 import com.allets.backend.data.server.data.result.MgContentsResult;
+import org.springframework.data.domain.PageImpl;
 
 import java.util.List;
 
@@ -9,5 +10,5 @@ import java.util.List;
  */
 public interface MgContentsFacade {
 
-    List<MgContentsResult> findMgContents(String q, Integer offset, Integer limit)throws Exception;
+    PageImpl<MgContentsResult> findMgContents(String q, Integer offset, Integer limit)throws Exception;
 }

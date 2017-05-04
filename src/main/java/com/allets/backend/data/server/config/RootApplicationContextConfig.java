@@ -11,7 +11,7 @@ import org.springframework.stereotype.Controller;
         DatasourceConfig.class, JPAConfig.class, SecurityConfig.class, RedisConfig.class, AWSUploadConfig.class, EmailConfig.class, VelocityEngineConfig.class, JSONDocConfig.class
         , ElasticSearchConfig.class})
 @ComponentScan(
-        basePackages = {"com.allets.backend.ums.server.facade", "com.allets.backend.ums.server.service"}, excludeFilters = {
+        basePackages = {"com.allets.backend.data.server.facade", "com.allets.backend.data.server.service"}, excludeFilters = {
         @ComponentScan.Filter(type = FilterType.ANNOTATION, value = Controller.class),
         @ComponentScan.Filter(type = FilterType.ANNOTATION, value = Configuration.class)})
 @EnableAspectJAutoProxy

@@ -43,7 +43,7 @@ import java.util.List;
  * 기본 REST 설정은 DefaultRestConfig 사용하고. 각 프로젝트 마다 @ComponentScan 재정의하고 프로젝트 추가적인
  * 부분만 @Bean으로 설정 한다. 또한 메서드를 수정할 경우 override 한다.
  */
-@ComponentScan(includeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION, value = Controller.class)}, basePackages = {"com.allets.backend.ums.server.web"})
+@ComponentScan(includeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION, value = Controller.class)}, basePackages = {"com.allets.backend.data.server.web"})
 @EnableWebMvc
 @Import({DefaultPropertyConfig.class})
 @EnableAspectJAutoProxy

@@ -34,8 +34,7 @@ public class User  implements java.io.Serializable {
      private String status;
      private Date notiCheckDate;
      private int age15plus;
-     private Set<MgCommentLike> mgCommentLikes = new HashSet<MgCommentLike>(0);
-     private Set<MgContents> mgContentses = new HashSet<MgContents>(0);
+    private Set<MgContents> mgContentses = new HashSet<MgContents>(0);
 
     public User() {
     }
@@ -45,7 +44,7 @@ public class User  implements java.io.Serializable {
         this.cdate = cdate;
         this.status = status;
     }
-    public User(String name, String sex, String birthday, Date cdate, String email, String password, String photo, String hash, String level, String introMessage, String status, Date notiCheckDate, int age15plus, Set<MgCommentLike> mgCommentLikes, Set<MgContents> mgContentses) {
+    public User(String name, String sex, String birthday, Date cdate, String email, String password, String photo, String hash, String level, String introMessage, String status, Date notiCheckDate, int age15plus,Set<MgContents> mgContentses) {
        this.name = name;
        this.sex = sex;
        this.birthday = birthday;
@@ -59,8 +58,7 @@ public class User  implements java.io.Serializable {
        this.status = status;
        this.notiCheckDate = notiCheckDate;
        this.age15plus = age15plus;
-       this.mgCommentLikes = mgCommentLikes;
-       this.mgContentses = mgContentses;
+        this.mgContentses = mgContentses;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -190,15 +188,8 @@ public class User  implements java.io.Serializable {
     public void setAge15plus(int age15plus) {
         this.age15plus = age15plus;
     }
-@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="user")
-    public Set<MgCommentLike> getMgCommentLikes() {
-        return this.mgCommentLikes;
-    }
-    
-    public void setMgCommentLikes(Set<MgCommentLike> mgCommentLikes) {
-        this.mgCommentLikes = mgCommentLikes;
-    }
-@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="user")
+
+    @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="user")
     public Set<MgContents> getMgContentses() {
         return this.mgContentses;
     }
