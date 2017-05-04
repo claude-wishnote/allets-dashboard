@@ -21,6 +21,7 @@ function autoLogin() {
 
 //login by id and password
 function login(name, password) {
+    blockObj($('div.login-container'));
     var encyptedPwd = "";
     if (name == undefined && password == undefined) {
         name = $('#name').val();
@@ -42,16 +43,16 @@ function login(name, password) {
         type: 'POST',
         url: '/v1.0/sessions',
         headers: {
-            "Accept-Language":$.cookie("umsLanguage"),
-            "X-ALLETS-LANG": $.cookie("umsLanguage").substring(0,2),
-            "X-ALLETS-COUNTRY": $.cookie("umsLanguage").substring(3)
+            "Accept-Language":$.cookie("dataLanguage"),
+            "X-ALLETS-LANG": $.cookie("dataLanguage").substring(0,2),
+            "X-ALLETS-COUNTRY": $.cookie("dataLanguage").substring(3)
         },
         data: {
             name: name,
             password: encyptedPwd
         },
         success: function (data, status, jqXHR) {
-            //console.log(data);
+            $('div.login-container').unblock();
             data.password = encyptedPwd;
             $.cookie("monitor", JSON.stringify(data), {path: '/', expires: 7});
             //console.log( $.cookie('allets-data-location'));
@@ -66,7 +67,7 @@ function login(name, password) {
         },
         error: function
             (XMLHttpRequest, textStatus, errorThrown) {
-            //console.log(XMLHttpRequest);
+            $('div.login-container').unblock();
             //var httpStatus = XMLHttpRequest.status;
             //var responseText = XMLHttpRequest.responseText;
             var responseJson = XMLHttpRequest.responseJSON;
@@ -81,3 +82,14 @@ $(document).keydown(function (event) {
         login();
     }
 });
+
+function blockObj(obj) {
+    obj.block({
+        message: '<h6><span class=\'default-color0\'>login...</span></h6>',
+        css: {
+            backgroundColor: 'rgba(255,255,255,0)',
+            color: 'rgba(255,255,255,0.8)',
+            border: '0px'
+        }
+    });
+}

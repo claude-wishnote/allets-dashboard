@@ -179,7 +179,7 @@
                             <input type="text" class="form-control input-sm" id="contentViewSearchKeyword" style="padding-left: 10px;" placeholder="search with content title">
                             <%--<i class="btn btn-sm glyphicon glyphicon-search blue" id="contentViewSearchButton"></i>--%>
                             </span>
-                            <button href="javascript:void(0);" id="excelButton" class="btn btn-info btn-sm">excel</button>
+                            <%--<button href="javascript:void(0);" id="excelButton" class="btn btn-info btn-sm">excel</button>--%>
                         </div>
                     </div>
                     <!-- /search bar-->
@@ -271,11 +271,11 @@
 <script src="/js/datetime/bootstrap-datepicker.js"></script>
 <!--i18n-->
 <script src="/js/jquery.i18n.properties.js" charset=“UTF-8”></script>
-<script src="/js/data/i18n.js"></script>
+<script src="/js/data/i18n.js?v=1"></script>
 
-<script src="/js/data/const.js" charset=“UTF-8”></script>
+<script src="/js/data/const.js?v=1" charset=“UTF-8”></script>
 
-<script src="/js/data/pager/pager.js" charset=“UTF-8”></script>
-<script src="/js/data/jumper/allets-data-jumper.js" charset=“UTF-8”></script>
+<script src="/js/data/pager/pager.js?v=1" charset=“UTF-8”></script>
+<script src="/js/data/jumper/allets-data-jumper.js?v=1" charset=“UTF-8”></script>
 
-<script src="/js/data/content/content-view.js" charset=“UTF-8”></script>
+<script src="/js/data/content/content-view.js?v=1" charset=“UTF-8”></script>

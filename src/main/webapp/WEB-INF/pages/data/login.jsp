@@ -27,13 +27,14 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/slimscroll/jquery.slimscroll.min.js"></script>
     <script src="/js/jquery.cookie.min.js"></script>
+    <script src="/js/jquery.blockUI.js"></script>
 
     <!--Beyond Scripts-->
     <script src="/js/beyond.js"></script>
 <!--i18n-->
 <script src="/js/jquery.i18n.properties.js" charset=“UTF-8”></script>
-<script src="/js/data/i18n.js"></script>
+<script src="/js/data/i18n.js?v=1"></script>
 
-<script src="/js/data/login/allets-data-login.js"></script>
+<script src="/js/data/login/allets-data-login.js?v=1"></script>
 
 

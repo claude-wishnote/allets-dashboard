@@ -253,7 +253,7 @@
 <script src="/js/datetime/bootstrap-datepicker.js"></script>
 <!--i18n-->
 <script src="/js/jquery.i18n.properties.js" charset=“UTF-8”></script>
-<script src="/js/data/i18n.js"></script>
+<script src="/js/data/i18n.js?v=1"></script>
 
-<script src="/js/data/account/editior-view.js"></script>
+<script src="/js/data/account/editior-view.js?v=1"></script>
 

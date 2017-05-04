@@ -85,9 +85,9 @@ function getContents(offset) {
         method: "GET",
         url: "/v1.2/mgContents",
         headers: {
-            "Accept-Language":$.cookie("umsLanguage"),
-            "X-ALLETS-LANG": $.cookie("umsLanguage").substring(0,2),
-            "X-ALLETS-COUNTRY": $.cookie("umsLanguage").substring(3)
+            "Accept-Language":$.cookie("dataLanguage"),
+            "X-ALLETS-LANG": $.cookie("dataLanguage").substring(0,2),
+            "X-ALLETS-COUNTRY": $.cookie("dataLanguage").substring(3)
         },
         data: param,
         success: function (data, status, jqXHR) {

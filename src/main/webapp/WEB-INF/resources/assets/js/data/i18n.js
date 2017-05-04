@@ -20,28 +20,28 @@ function supportI18n() {
         $('[value=' + languages[index] + ']').show();
     }
     var lang = navigator.language;
-    if ($.cookie("umsLanguage")) {
-        lang = $.cookie("umsLanguage");
+    if ($.cookie("dataLanguage")) {
+        lang = $.cookie("dataLanguage");
     } else {
-        $.cookie('umsLanguage', lang);
+        $.cookie('dataLanguage', lang);
     }
-    if (languages.indexOf($.cookie("umsLanguage")) == -1) {
+    if (languages.indexOf($.cookie("dataLanguage")) == -1) {
         lang = mainLanguage;
-        $.cookie('umsLanguage', lang);
+        $.cookie('dataLanguage', lang);
     }
 
-    $('#languageSelector').val($.cookie('umsLanguage'));
-    console.log($.cookie("umsLanguage"));
+    $('#languageSelector').val($.cookie('dataLanguage'));
+    console.log($.cookie("dataLanguage"));
     $('#languageSelector').on('change', function (e) {
         console.log($('#languageSelector').val());
-        $.cookie("umsLanguage", $('#languageSelector').val());
-        window.location = $.cookie('umslocation');
+        $.cookie("dataLanguage", $('#languageSelector').val());
+        window.location = $.cookie('datalocation');
     });
     loadProperties('strings', '/i18n/', lang);
 }
 function notSupportI18n() {
     $('#languageSelector').hide();
-    $.cookie('umsLanguage', mainLanguage);
+    $.cookie('dataLanguage', mainLanguage);
     loadProperties('strings', '/i18n/', mainLanguage);
 }
 function loadProperties(name, path, lang) {
