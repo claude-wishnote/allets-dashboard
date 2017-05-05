@@ -28,11 +28,11 @@
             <div class="sidebar-collapse" id="sidebar-collapse">
                 <i class="collapse-icon fa fa-bars"></i>
             </div>
-            <div class="navbar-header pull-right" style="margin-right: 10px;margin-top: 5px;" >
-                <select id="languageSelector">
-                    <option value="en-US" data-i18n="common.language.en-US">en-US</option>
-                </select>
-            </div>
+            <%--<div class="navbar-header pull-right" style="margin-right: 10px;margin-top: 5px;" >--%>
+                <%--<select id="languageSelector">--%>
+                    <%--<option value="en-US" data-i18n="common.language.en-US">en-US</option>--%>
+                <%--</select>--%>
+            <%--</div>--%>
             <!-- /Sidebar Collapse -->
         </div>
     </div>

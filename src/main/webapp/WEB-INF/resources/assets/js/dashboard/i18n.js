@@ -5,7 +5,7 @@ var languages = ["zh-TW"
     //,"ja-JP"
 ];
 
-var mainLanguage = "ko-KR";
+var mainLanguage = "en-US";
 $(document).ready(function () {
     //notSupportI18n();
     supportI18n();
