@@ -157,9 +157,9 @@
 
 <!--i18n-->
 <script src="/js/jquery.i18n.properties.js" charset=“UTF-8”></script>
-<script src="/js/dashboard/i18n.js?v=1"></script>
+<script src="/js/dashboard/i18n.js?v=2"></script>
 
-<script src="/js/dashboard/statistics/usersInformatin.js?v=1"></script>
+<script src="/js/dashboard/statistics/usersInformatin.js?v=2"></script>
 
 
 

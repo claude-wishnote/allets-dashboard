@@ -159,7 +159,7 @@ public class MgContentsRepositoryImpl implements MgContentsRepositoryCustom {
             }
             mgContentsResult.setAppViewCount(findViewCount(mgContentsResult.getContentsId()));
             mgContentsResult.setWebViewCount(findWebViewCount(mgContentsResult.getContentsId()));
-            mgContentsResult.setShareCount(findShareCount(mgContentsResult.getContentsId())+findWebShareCount(mgContentsResult.getContentsId()));
+            mgContentsResult.setShareCount(findShareCount(mgContentsResult.getContentsId()));
 //            mgContentsResult.setAppViewCount(999);
 //            mgContentsResult.setWebViewCount(998);
 //            mgContentsResult.setShareCount(997);

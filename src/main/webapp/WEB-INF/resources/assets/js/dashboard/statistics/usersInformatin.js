@@ -312,19 +312,19 @@ function drawPieCharts(){
         toolbox: {
             show : true,
             feature : {
-                magicType : {
-                    show: true,
-                    type: ['pie', 'funnel'],
-                    title:{'pie':'pie','funnel':'funnel'},
-                    option: {
-                        funnel: {
-                            x: '25%',
-                            width: '50%',
-                            funnelAlign: 'left',
-                            max: 1548
-                        }
-                    }
-                },
+                // magicType : {
+                //     show: true,
+                //     type: ['pie', 'funnel'],
+                //     title:{'pie':'pie','funnel':'funnel'},
+                //     option: {
+                //         funnel: {
+                //             x: '25%',
+                //             width: '50%',
+                //             funnelAlign: 'left',
+                //             max: 1548
+                //         }
+                //     }
+                // },
                 restore : {
                     show : true,
                     title : 'Restore'
@@ -375,19 +375,19 @@ function drawPieCharts(){
         toolbox: {
             show : true,
             feature : {
-                magicType : {
-                    show: true,
-                    type: ['pie', 'funnel'],
-                    title:{'pie':'pie','funnel':'funnel'},
-                    option: {
-                        funnel: {
-                            x: '25%',
-                            width: '50%',
-                            funnelAlign: 'left',
-                            max: 1548
-                        }
-                    }
-                },
+                // magicType : {
+                //     show: true,
+                //     type: ['pie', 'funnel'],
+                //     title:{'pie':'pie','funnel':'funnel'},
+                //     option: {
+                //         funnel: {
+                //             x: '25%',
+                //             width: '50%',
+                //             funnelAlign: 'left',
+                //             max: 1548
+                //         }
+                //     }
+                // },
                 restore : {
                     show : true,
                     title : 'Restore'
