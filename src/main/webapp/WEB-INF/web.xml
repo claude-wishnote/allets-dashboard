@@ -19,7 +19,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>com.allets.backend.data.server.config.RootApplicationContextConfig</param-value>
+        <param-value>com.allets.backend.dashboard.server.config.RootApplicationContextConfig</param-value>
     </context-param>
 
     <context-param>
@@ -104,7 +104,7 @@
         </init-param>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>com.allets.backend.data.server.config.MVCConfig</param-value>
+            <param-value>com.allets.backend.dashboard.server.config.MVCConfig</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>

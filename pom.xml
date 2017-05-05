@@ -2,10 +2,10 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.allets.backend</groupId>
-	<artifactId>allets-data-server</artifactId>
+	<artifactId>allets-dashboard-server</artifactId>
 	<packaging>war</packaging>
 	<version>1.3.60.160509_release</version>
-	<name>allets-data-server Maven Webapp</name>
+	<name>allets-dashboard-server Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<!-- maven -->
@@ -589,7 +589,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>allets-data-#${BUILD_NUMBER}</finalName>
+		<finalName>allets-dashboard-#${BUILD_NUMBER}</finalName>
 		<plugins>
  
 			<plugin>
