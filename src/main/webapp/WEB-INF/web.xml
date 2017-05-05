@@ -4,11 +4,11 @@
          version="3.0">
 
 
-    <display-name>allets-backend-ums-server</display-name>
+    <display-name>allets-backend-dashboard-server</display-name>
 
     <context-param>
-        <param-name>webAppRootKey</param-name>
-        <param-value>allets-backend-ums-server</param-value>
+        <param-name>webAppRootKey</param-name>s
+        <param-value>allets-backend-dashboard-server</param-value>
     </context-param>
 
     <!-- 기본 국가 코드 -->

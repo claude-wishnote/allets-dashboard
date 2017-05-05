@@ -76,7 +76,7 @@
                         <%--</li>--%>
                         <%--<li id="subitemReportedUser">--%>
                             <%--<a href="##">--%>
-                                <%--<span class="menu-text" data-i18n="ums.report.account"></span>--%>
+                                <%--<span class="menu-text" data-i18n="dashboard.report.account"></span>--%>
                             <%--</a>--%>
                         <%--</li>--%>
                     <%--</ul>--%>
@@ -92,12 +92,12 @@
                     <%--<ul class="submenu" id="submenuItemHandled">--%>
                         <%--<li id="subitemHandledComments">--%>
                             <%--<a href="##">--%>
-                                <%--<span class="menu-text" data-i18n="ums.handle.history.comment"></span>--%>
+                                <%--<span class="menu-text" data-i18n="dashboard.handle.history.comment"></span>--%>
                             <%--</a>--%>
                         <%--</li>--%>
                         <%--<li id="subitemHandledUsers">--%>
                             <%--<a href="##">--%>
-                                <%--<span class="menu-text" data-i18n="ums.handle.history.account"></span>--%>
+                                <%--<span class="menu-text" data-i18n="dashboard.handle.history.account"></span>--%>
                             <%--</a>--%>
                         <%--</li>--%>
                     <%--</ul>--%>
@@ -134,7 +134,7 @@
                                         <i class="fa fa-calendar"></i>
                                         </span>
                                     </div>
-                                    <span class="icon-sub-txt" data-i18n="ums.handle.history.account.to" style="width:180px;"></span>
+                                    <span class="icon-sub-txt" data-i18n="dashboard.handle.history.account.to" style="width:180px;"></span>
                                 </div>
                                 <div class="calendar-box"  style="margin-right: 40px">
                                     <div class="input-group">
@@ -146,8 +146,8 @@
                                 </div>
                             </div>
                             <div class="calendar-btn">
-                                <button href="javascript:void(0);" id="searchButton" class="btn btn-info btn-sm" style="margin-top: 4px;" data-i18n="ums.handle.history.account.search"></button>
-                                <button href="javascript:void(0);" id="initSearchButton" class="btn btn-info btn-sm" style="margin-top: 4px;" data-i18n="ums.handle.history.account.reset"></button>
+                                <button href="javascript:void(0);" id="searchButton" class="btn btn-info btn-sm" style="margin-top: 4px;" data-i18n="dashboard.handle.history.account.search"></button>
+                                <button href="javascript:void(0);" id="initSearchButton" class="btn btn-info btn-sm" style="margin-top: 4px;" data-i18n="dashboard.handle.history.account.reset"></button>
                             </div>
                         </div>
                     </div>
@@ -156,11 +156,11 @@
                     <div class="row searchbar">
                         <div class="col-sm-3">
                             <%--<select id="handledAccountFilter">--%>
-                                <%--<option value="ALL" selected = "selected" data-i18n="ums.handle.history.account.all"></option>--%>
-                                <%--<option value="BLOK" data-i18n="ums.handle.history.account.blind"></option>--%>
-                                <%--<option value="DEL" data-i18n="ums.handle.history.account.delete"></option>--%>
-                                <%--<option value="PASS" data-i18n="ums.handle.history.account.pass"></option>--%>
-                                <%--<option value="monitorId" data-i18n="ums.handle.history.account.monitorid"></option>--%>
+                                <%--<option value="ALL" selected = "selected" data-i18n="dashboard.handle.history.account.all"></option>--%>
+                                <%--<option value="BLOK" data-i18n="dashboard.handle.history.account.blind"></option>--%>
+                                <%--<option value="DEL" data-i18n="dashboard.handle.history.account.delete"></option>--%>
+                                <%--<option value="PASS" data-i18n="dashboard.handle.history.account.pass"></option>--%>
+                                <%--<option value="monitorId" data-i18n="dashboard.handle.history.account.monitorid"></option>--%>
                             <%--</select>--%>
                                 show
                             <select id="handledAccountLimit">

@@ -46,7 +46,7 @@ public class HelloController {
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public ModelAndView login(HttpServletRequest request,
                               HttpServletResponse response) throws Exception {
-        ModelAndView mav = new ModelAndView("/ums/login");
+        ModelAndView mav = new ModelAndView("/dashboard/login");
         return mav;
     }
 

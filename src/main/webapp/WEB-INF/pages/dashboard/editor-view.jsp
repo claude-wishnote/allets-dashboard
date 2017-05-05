@@ -76,7 +76,7 @@
                     <%--</li>--%>
                     <%--<li id="subitemReportedUser">--%>
                     <%--<a href="##">--%>
-                    <%--<span class="menu-text" data-i18n="ums.report.account"></span>--%>
+                    <%--<span class="menu-text" data-i18n="dashboard.report.account"></span>--%>
                     <%--</a>--%>
                     <%--</li>--%>
                     <%--</ul>--%>
@@ -92,12 +92,12 @@
                     <%--<ul class="submenu" id="submenuItemHandled">--%>
                     <%--<li id="subitemHandledComments">--%>
                     <%--<a href="##">--%>
-                    <%--<span class="menu-text" data-i18n="ums.handle.history.comment"></span>--%>
+                    <%--<span class="menu-text" data-i18n="dashboard.handle.history.comment"></span>--%>
                     <%--</a>--%>
                     <%--</li>--%>
                     <%--<li id="subitemHandledUsers">--%>
                     <%--<a href="##">--%>
-                    <%--<span class="menu-text" data-i18n="ums.handle.history.account"></span>--%>
+                    <%--<span class="menu-text" data-i18n="dashboard.handle.history.account"></span>--%>
                     <%--</a>--%>
                     <%--</li>--%>
                     <%--</ul>--%>
@@ -121,19 +121,19 @@
                 <div class="row searchbar">
                     <div class="col-sm-12">
                         <select id="editorInfoSearchField">
-                            <option value="nickName" data-i18n="ums.account.management.nickname"></option>
-                            <option value="email" data-i18n="ums.account.management.email"></option>
-                            <option value="uid" data-i18n="ums.account.management.uid"></option>
+                            <option value="nickName" data-i18n="dashboard.account.management.nickname"></option>
+                            <option value="email" data-i18n="dashboard.account.management.email"></option>
+                            <option value="uid" data-i18n="dashboard.account.management.uid"></option>
                         </select>
                         <%--<select id="searchSource">--%>
-                            <%--&lt;%&ndash;<option value="els" data-i18n="ums.account.management.fuzzy"></option>&ndash;%&gt;--%>
-                            <%--<option value="mysql" data-i18n="ums.account.management.exact"></option>--%>
+                            <%--&lt;%&ndash;<option value="els" data-i18n="dashboard.account.management.fuzzy"></option>&ndash;%&gt;--%>
+                            <%--<option value="mysql" data-i18n="dashboard.account.management.exact"></option>--%>
                         <%--</select>--%>
                         <span class="input-icon">
                             <input type="text" id="editorInfoSearchKeyword" class="form-control input-smdrop down-toggle"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <ul id="searchResultDropDown" class="dropdown-menu dropdown-defult col-lg-12">
-                                <li id="searchTip" value="1"><a><p data-i18n="ums.report.comment.searchfield.click">click</p> <i class="btn btn-sm glyphicon glyphicon-search blue" ></i> <p data-i18n="ums.report.comment.searchfield.placeholder">button or press "ENTER" to search editors.</p> </a></li>
+                                <li id="searchTip" value="1"><a><p data-i18n="dashboard.report.comment.searchfield.click">click</p> <i class="btn btn-sm glyphicon glyphicon-search blue" ></i> <p data-i18n="dashboard.report.comment.searchfield.placeholder">button or press "ENTER" to search editors.</p> </a></li>
                             </ul>
                             <button id="editorInfoSearchButton"
                                     class="btn btn-sm glyphicon glyphicon-search blue"></button>

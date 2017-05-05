@@ -80,7 +80,7 @@
                     <%--</li>--%>
                     <%--<li id="subitemReportedUser">--%>
                     <%--<a href="##">--%>
-                    <%--<span class="menu-text" data-i18n="ums.report.account"></span>--%>
+                    <%--<span class="menu-text" data-i18n="dashboard.report.account"></span>--%>
                     <%--</a>--%>
                     <%--</li>--%>
                     <%--</ul>--%>
@@ -96,12 +96,12 @@
                     <%--<ul class="submenu" id="submenuItemHandled">--%>
                     <%--<li id="subitemHandledComments">--%>
                     <%--<a href="##">--%>
-                    <%--<span class="menu-text" data-i18n="ums.handle.history.comment"></span>--%>
+                    <%--<span class="menu-text" data-i18n="dashboard.handle.history.comment"></span>--%>
                     <%--</a>--%>
                     <%--</li>--%>
                     <%--<li id="subitemHandledUsers">--%>
                     <%--<a href="##">--%>
-                    <%--<span class="menu-text" data-i18n="ums.handle.history.account"></span>--%>
+                    <%--<span class="menu-text" data-i18n="dashboard.handle.history.account"></span>--%>
                     <%--</a>--%>
                     <%--</li>--%>
                     <%--</ul>--%>
