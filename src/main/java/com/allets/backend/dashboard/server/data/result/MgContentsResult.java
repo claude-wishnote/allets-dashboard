@@ -27,7 +27,7 @@ public class MgContentsResult {
     Integer webViewCount;
     Integer appViewCount;
     Integer likeCount;
-    Integer shareCount;
+    String shareCount;
     Integer bookmarkCount;
     Integer commentCount;
 
@@ -113,11 +113,11 @@ public class MgContentsResult {
         this.likeCount = likeCount;
     }
 
-    public Integer getShareCount() {
+    public String getShareCount() {
         return shareCount;
     }
 
-    public void setShareCount(Integer shareCount) {
+    public void setShareCount(String shareCount) {
         this.shareCount = shareCount;
     }
 

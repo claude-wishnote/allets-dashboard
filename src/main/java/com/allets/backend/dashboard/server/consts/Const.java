@@ -93,4 +93,19 @@ public interface Const {
         add("admin@allets.com");
     }};
 
+//    public final static Map<String,String> hashMap = new HashMap<String,String>(){
+//        {
+//            put("","");
+//            put("","");
+//        }
+//    };
+
+    public interface UserSnsType
+    {
+        String FACEBOOK = "E";
+        String EMAIL = "E";
+        String KAKAO = "K";
+        String LINE = "L";
+        String TWITTER = "T";
+    }
 }

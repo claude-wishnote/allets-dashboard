@@ -1,5 +1,6 @@
 package com.allets.backend.dashboard.server.repository.common;
 
+import com.allets.backend.dashboard.server.consts.Const;
 import com.allets.backend.dashboard.server.data.result.MgContentsResult;
 import com.allets.backend.dashboard.server.exception.BadRequestException;
 import org.apache.commons.lang3.StringUtils;
@@ -170,28 +171,79 @@ public class MgContentsRepositoryImpl implements MgContentsRepositoryCustom {
         return new PageImpl<MgContentsResult>(mgContentsList, pageable, count);
     }
 
-     public Integer findShareCount(Long uid) throws Exception {
+     public String findShareCount(Long uid) throws Exception {
         if (uid == null) {
              return null;
         }
 
         String hashKeyRightSide = ":" + (uid / 1000);
-        String shareCount = null;
+        String shareCount = "";
 
-        String restKey = "CONTENTS_SHARE_COUNT" + hashKeyRightSide;
-        String hashKey = uid.toString();
+         String restKeyEmail = "CONTENTS_SHARE_COUNT_" + Const.UserSnsType.EMAIL + hashKeyRightSide;
+         String restKeyWebEmail = "CONTENTS_SHARE_COUNT_WEB_" + Const.UserSnsType.EMAIL + hashKeyRightSide;
+         String restKeyFacebook = "CONTENTS_SHARE_COUNT_" + Const.UserSnsType.FACEBOOK + hashKeyRightSide;
+         String restKeyWebFacebook = "CONTENTS_SHARE_COUNT_WEB_" + Const.UserSnsType.FACEBOOK + hashKeyRightSide;
+         String restKeyKakao = "CONTENTS_SHARE_COUNT_" + Const.UserSnsType.KAKAO + hashKeyRightSide;
+         String restKeyWebKakao = "CONTENTS_SHARE_COUNT_WEB_" + Const.UserSnsType.KAKAO + hashKeyRightSide;
+         String restKeyLine = "CONTENTS_SHARE_COUNT_" + Const.UserSnsType.LINE + hashKeyRightSide;
+         String restKeyWebLine = "CONTENTS_SHARE_COUNT_WEB_" + Const.UserSnsType.LINE + hashKeyRightSide;
+         String restKeyTwitter = "CONTENTS_SHARE_COUNT_" + Const.UserSnsType.TWITTER + hashKeyRightSide;
+         String restKeyWebTwitter = "CONTENTS_SHARE_COUNT_WEB_" + Const.UserSnsType.TWITTER + hashKeyRightSide;
 
-        if (hashOperations.hasKey(restKey, hashKey)) {
-            shareCount = (String) hashOperations.get(restKey, hashKey);
-        }
-//        else {
-//            hashOperations.put(restKey, hashKey, String.valueOf(0));
-//        }
+         Integer emailShareCount = 0;
+         Integer webEmailShareCount = 0;
+         Integer facebookShareCount = 0;
+         Integer webFacebookShareCount = 0;
+         Integer kakaoShareCount = 0;
+         Integer webKakaoShareCount = 0;
+         Integer lineShareCount = 0;
+         Integer webLineShareCount = 0;
+         Integer twitterShareCount = 0;
+         Integer webTwitterShareCount = 0;
 
-        if (shareCount == null)
-            shareCount = "0";
+         String hashKey = uid.toString();
 
-        return Integer.valueOf(shareCount);
+         if (hashOperations.hasKey(restKeyEmail, hashKey)) {
+             emailShareCount = (Integer) hashOperations.get(restKeyEmail, hashKey);
+         }
+         if (hashOperations.hasKey(restKeyWebEmail, hashKey)) {
+             webEmailShareCount = (Integer) hashOperations.get(restKeyWebEmail, hashKey);
+         }
+         if (hashOperations.hasKey(restKeyFacebook, hashKey)) {
+             facebookShareCount = (Integer) hashOperations.get(restKeyFacebook, hashKey);
+         }
+         if (hashOperations.hasKey(restKeyWebFacebook, hashKey)) {
+             webFacebookShareCount = (Integer) hashOperations.get(restKeyWebFacebook, hashKey);
+         }
+         if (hashOperations.hasKey(restKeyKakao, hashKey)) {
+             kakaoShareCount = (Integer) hashOperations.get(restKeyKakao, hashKey);
+         }
+         if (hashOperations.hasKey(restKeyWebKakao, hashKey)) {
+             webKakaoShareCount = (Integer) hashOperations.get(restKeyWebKakao, hashKey);
+         }
+         if (hashOperations.hasKey(restKeyLine, hashKey)) {
+             lineShareCount = (Integer) hashOperations.get(restKeyLine, hashKey);
+         }
+         if (hashOperations.hasKey(restKeyWebLine, hashKey)) {
+             webLineShareCount = (Integer) hashOperations.get(restKeyWebLine, hashKey);
+         }
+         if (hashOperations.hasKey(restKeyTwitter, hashKey)) {
+             twitterShareCount = (Integer) hashOperations.get(restKeyTwitter, hashKey);
+         }
+         if (hashOperations.hasKey(restKeyWebTwitter, hashKey)) {
+             webTwitterShareCount = (Integer) hashOperations.get(restKeyWebTwitter, hashKey);
+         }
+         //        else {
+         //            hashOperations.put(restKey, hashKey, String.valueOf(0));
+         //        }
+
+         shareCount = "Email:"+(emailShareCount+webEmailShareCount) +"<br>"+
+         "FB:"+(facebookShareCount+webFacebookShareCount) +"<br>"+
+         "KT:"+(kakaoShareCount+webKakaoShareCount) +"<br>"+
+         "Line:"+(lineShareCount+webLineShareCount) +"<br>"+
+         "Twitter:"+(twitterShareCount+webTwitterShareCount) +"<br>";
+
+         return shareCount;
     }
 
     public Integer findWebShareCount(Long uid) throws Exception {
