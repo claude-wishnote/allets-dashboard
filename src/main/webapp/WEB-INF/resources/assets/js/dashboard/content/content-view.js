@@ -172,13 +172,18 @@ function refreshDatatable() {
             // 'fnInfoCallback': fnInfoCallback,
             // 'footerCallback': footerCallback,
             'fnCreatedRow': fnCreatedRow,
+            scrollY: 500,
+            "scrollCollapse": true,
+            "paging":false
             // 'fnInitComplete': fnInitComplete
     }
     )
 }
+// var scrollY = function () {
+//     console.log($(window).height()-$('.navbar-inner').offset().top);
+//     return $(window).height()-$('.navbar-inner').offset().top;
+// };
 
 var fnCreatedRow = function (nRow, aData, iDataIndex) {
-
-
 
 }

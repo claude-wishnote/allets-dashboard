@@ -189,8 +189,9 @@
                             <div class="widget">
                                 <div class="widget-body">
                                     <!-- data table -->
-                                    <table id="contentViewTable" class="table table-hover table-striped table-bordered text-center">
-                                        <colgroup>
+                                    <table id="contentViewTable" class="table table-hover table-striped table-bordered text-center"
+                                           style="table-layout:fixed;word-break:break-all;word-wrap:break-word;">
+                                    <colgroup>
                                             <col width="10%" />
                                             <col width="10%" />
                                             <col width="10%" />
@@ -210,8 +211,8 @@
                                             <th>Name</th>
                                             <th>UID</th>
                                             <th>Title</th>
-                                            <th>app-view</th>
-                                            <th>web-view</th>
+                                            <th>appView</th>
+                                            <th>webView</th>
                                             <th>like</th>
                                             <th>share</th>
                                             <th>bookmark</th>
