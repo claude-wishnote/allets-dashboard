@@ -207,47 +207,31 @@ public class MgContentsRepositoryImpl implements MgContentsRepositoryCustom {
          Integer twitterShareCount = 0;
          Integer webTwitterShareCount = 0;
 
+         String[] resKeys = {restKeyEmail,restKeyWebEmail,restKeyFacebook,restKeyWebFacebook,restKeyKakao,restKeyWebKakao,restKeyLine,restKeyWebLine,restKeyTwitter,restKeyWebTwitter};
+         Integer[] valuse = {emailShareCount,webEmailShareCount,facebookShareCount,webFacebookShareCount,kakaoShareCount,webKakaoShareCount,lineShareCount,webLineShareCount,twitterShareCount,webTwitterShareCount};
          String hashKey = uid.toString();
 
-         if (hashOperations.hasKey(restKeyEmail, hashKey)) {
-             emailShareCount = (Integer) hashOperations.get(restKeyEmail, hashKey);
+         for(int i=0;i<10;i++)
+         {
+             String cuntString = (String) hashOperations.get(resKeys[i], hashKey);
+             if(cuntString == null)
+             {
+                 valuse[i] = 0;
+             }else
+             {
+                 valuse[i] = Integer.valueOf(cuntString);
+             }
          }
-         if (hashOperations.hasKey(restKeyWebEmail, hashKey)) {
-             webEmailShareCount = (Integer) hashOperations.get(restKeyWebEmail, hashKey);
-         }
-         if (hashOperations.hasKey(restKeyFacebook, hashKey)) {
-             facebookShareCount = (Integer) hashOperations.get(restKeyFacebook, hashKey);
-         }
-         if (hashOperations.hasKey(restKeyWebFacebook, hashKey)) {
-             webFacebookShareCount = (Integer) hashOperations.get(restKeyWebFacebook, hashKey);
-         }
-         if (hashOperations.hasKey(restKeyKakao, hashKey)) {
-             kakaoShareCount = (Integer) hashOperations.get(restKeyKakao, hashKey);
-         }
-         if (hashOperations.hasKey(restKeyWebKakao, hashKey)) {
-             webKakaoShareCount = (Integer) hashOperations.get(restKeyWebKakao, hashKey);
-         }
-         if (hashOperations.hasKey(restKeyLine, hashKey)) {
-             lineShareCount = (Integer) hashOperations.get(restKeyLine, hashKey);
-         }
-         if (hashOperations.hasKey(restKeyWebLine, hashKey)) {
-             webLineShareCount = (Integer) hashOperations.get(restKeyWebLine, hashKey);
-         }
-         if (hashOperations.hasKey(restKeyTwitter, hashKey)) {
-             twitterShareCount = (Integer) hashOperations.get(restKeyTwitter, hashKey);
-         }
-         if (hashOperations.hasKey(restKeyWebTwitter, hashKey)) {
-             webTwitterShareCount = (Integer) hashOperations.get(restKeyWebTwitter, hashKey);
-         }
+
          //        else {
          //            hashOperations.put(restKey, hashKey, String.valueOf(0));
          //        }
 
-         shareCount = "Email:"+(emailShareCount+webEmailShareCount) +"<br>"+
-         "FB:"+(facebookShareCount+webFacebookShareCount) +"<br>"+
-         "KT:"+(kakaoShareCount+webKakaoShareCount) +"<br>"+
-         "Line:"+(lineShareCount+webLineShareCount) +"<br>"+
-         "Twitter:"+(twitterShareCount+webTwitterShareCount) +"<br>";
+         shareCount = "Email:"+(valuse[0]+valuse[1]) +"<br>"+
+         "FB:"+(valuse[2]+valuse[3]) +"<br>"+
+         "KT:"+(valuse[4]+valuse[5]) +"<br>"+
+         "Line:"+(valuse[6]+valuse[7]) +"<br>"+
+         "Twitter:"+(valuse[8]+valuse[9]) +"<br>";
 
          return shareCount;
     }
