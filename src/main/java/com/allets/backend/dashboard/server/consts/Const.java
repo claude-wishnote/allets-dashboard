@@ -102,10 +102,10 @@ public interface Const {
 
     public interface UserSnsType
     {
-        String FACEBOOK = "E";
-        String EMAIL = "E";
-        String KAKAO = "K";
-        String LINE = "L";
-        String TWITTER = "T";
+        String FACEBOOK = "FACEBOOK";
+        String EMAIL = "EMAIL";
+        String KAKAO = "KAKAO";
+        String LINE = "LINE";
+        String TWITTER = "TWITTER";
     }
 }

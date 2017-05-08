@@ -86,7 +86,7 @@ public class MgContentsRepositoryImpl implements MgContentsRepositoryCustom {
         //content should be normal content but not serie(PAST)
         listSql = "SELECT mg.contents_id,mg.title,mg.contents_type,mg.uid,mg.udate, " +
                 "(select name from USER u where u.uid = mg.uid) name, " +
-                "(select count(*) from MG_COMMENT mgc where mgc.contents_id = mg.contents_id) commentCount, " +
+                "(select count(*) from MG_COMMENT mgc where mgc.contents_id = mg.contents_id and mgc.status = 'ACTV') commentCount, " +
                 "(select count(*) from MG_BOOKMARK mgb where mgb.contents_id = mg.contents_id) bookmarkCount, " +
                 "(select count(*) from MG_LIKE mgl where mgl.contents_id = mg.contents_id) likeCount, " +
                 " mg.cdate " +
