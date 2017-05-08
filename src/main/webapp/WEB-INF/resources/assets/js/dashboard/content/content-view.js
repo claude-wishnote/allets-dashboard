@@ -72,7 +72,11 @@ function getContents(offset) {
         if ($.trim(q) != '') {
             q = q + ',';
         }
-        q = q + 'endDate='+endDate;
+        // q = q + 'endDate='+endDate;
+        var end = new Date(Date.parse(endDate.replace(/-/g, "/")));
+        var endDateObj = new Date(end.getTime() + 86400000);
+        var endString = endDateObj.getFullYear() + '-' + (endDateObj.getMonth() + 1) + '-' + endDateObj.getDate();
+        q = q + "endDate=" + endString;
     }
     console.log(q);
     var param = {

@@ -58,9 +58,10 @@ public class MgContentsRepositoryImpl implements MgContentsRepositoryCustom {
                 if (checkDate((String) parametersMap.get("startDate")) && checkDate((String) parametersMap.get("endDate"))) {
                     String startDate = (String) parametersMap.get("startDate");
                     String endDate = (String) parametersMap.get("endDate");
-                    countSql = countSql +
-                            " AND (mg.udate BETWEEN '" + startDate + "'" +
-                            " AND  '" + endDate + "')";
+                    countSql = countSql + " AND mg.udate >= '" + startDate + "' AND mg.udate < '" + endDate + "' ";
+//                    countSql = countSql +
+//                            " AND (mg.udate BETWEEN '" + startDate + "'" +
+//                            " AND  '" + endDate + "')";
                 }
             } else if (parametersMap.containsKey("startDate")) {
                 if (checkDate((String) parametersMap.get("startDate"))) {
@@ -70,7 +71,7 @@ public class MgContentsRepositoryImpl implements MgContentsRepositoryCustom {
             } else if (parametersMap.containsKey("endDate")) {
                 if (checkDate((String) parametersMap.get("endDate"))) {
                     String endDate = (String) parametersMap.get("endDate");
-                    countSql = countSql + " AND mg.udate <= '" + endDate + "' ";
+                    countSql = countSql + " AND mg.udate < '" + endDate + "' ";
                 }
             }
         }
@@ -99,9 +100,10 @@ public class MgContentsRepositoryImpl implements MgContentsRepositoryCustom {
                 if (checkDate((String) parametersMap.get("startDate")) && checkDate((String) parametersMap.get("endDate"))) {
                     String startDate = (String) parametersMap.get("startDate");
                     String endDate = (String) parametersMap.get("endDate");
-                    listSql = listSql +
-                            " AND (mg.udate BETWEEN '" + startDate + "'" +
-                            " AND  '" + endDate + "')";
+                    listSql = listSql + " AND mg.udate >= '" + startDate + "' AND mg.udate < '" + endDate + "' ";
+//                    listSql = listSql +
+//                            " AND (mg.udate BETWEEN '" + startDate + "'" +
+//                            " AND  '" + endDate + "')";
                 }
             } else if (parametersMap.containsKey("startDate")) {
                 if (checkDate((String) parametersMap.get("startDate"))) {
@@ -111,7 +113,7 @@ public class MgContentsRepositoryImpl implements MgContentsRepositoryCustom {
             } else if (parametersMap.containsKey("endDate")) {
                 if (checkDate((String) parametersMap.get("endDate"))) {
                     String endDate = (String) parametersMap.get("endDate");
-                    listSql = listSql + " AND mg.udate <= '" + endDate + "' ";
+                    listSql = listSql + " AND mg.udate < '" + endDate + "' ";
                 }
             }
         }
@@ -166,7 +168,7 @@ public class MgContentsRepositoryImpl implements MgContentsRepositoryCustom {
             mgContentsResult.setShareCount(findShareCount(mgContentsResult.getContentsId()));
 //            mgContentsResult.setAppViewCount(999);
 //            mgContentsResult.setWebViewCount(998);
-//            mgContentsResult.setShareCount(997);
+//            mgContentsResult.setShareCount("");
 
             mgContentsList.add(mgContentsResult);
         }

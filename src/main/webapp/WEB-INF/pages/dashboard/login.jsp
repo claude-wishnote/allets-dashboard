@@ -33,8 +33,8 @@
     <script src="/js/beyond.js"></script>
 <!--i18n-->
 <script src="/js/jquery.i18n.properties.js" charset=“UTF-8”></script>
-<script src="/js/dashboard/i18n.js?v=2"></script>
+<script src="/js/dashboard/i18n.js?v=3"></script>
 
-<script src="/js/dashboard/login/allets-data-login.js?v=2"></script>
+<script src="/js/dashboard/login/allets-data-login.js?v=3"></script>
 
 
