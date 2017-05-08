@@ -59,18 +59,18 @@ public class MgContentsRepositoryImpl implements MgContentsRepositoryCustom {
                     String startDate = (String) parametersMap.get("startDate");
                     String endDate = (String) parametersMap.get("endDate");
                     countSql = countSql +
-                            " AND (mg.cdate BETWEEN '" + startDate + "'" +
+                            " AND (mg.udate BETWEEN '" + startDate + "'" +
                             " AND  '" + endDate + "')";
                 }
             } else if (parametersMap.containsKey("startDate")) {
                 if (checkDate((String) parametersMap.get("startDate"))) {
                     String startDate = (String) parametersMap.get("startDate");
-                    countSql = countSql + " AND mg.cdate >= '" + startDate + "' ";
+                    countSql = countSql + " AND mg.udate >= '" + startDate + "' ";
                 }
             } else if (parametersMap.containsKey("endDate")) {
                 if (checkDate((String) parametersMap.get("endDate"))) {
                     String endDate = (String) parametersMap.get("endDate");
-                    countSql = countSql + " AND mg.cdate <= '" + endDate + "' ";
+                    countSql = countSql + " AND mg.udate <= '" + endDate + "' ";
                 }
             }
         }
@@ -87,7 +87,8 @@ public class MgContentsRepositoryImpl implements MgContentsRepositoryCustom {
                 "(select name from USER u where u.uid = mg.uid) name, " +
                 "(select count(*) from MG_COMMENT mgc where mgc.contents_id = mg.contents_id) commentCount, " +
                 "(select count(*) from MG_BOOKMARK mgb where mgb.contents_id = mg.contents_id) bookmarkCount, " +
-                "(select count(*) from MG_LIKE mgl where mgl.contents_id = mg.contents_id) likeCount " +
+                "(select count(*) from MG_LIKE mgl where mgl.contents_id = mg.contents_id) likeCount, " +
+                " mg.cdate " +
                 " FROM MG_CONTENTS mg WHERE mg.contents_type != 'PAST' ";
 
         if (parametersMap != null) {
@@ -99,18 +100,18 @@ public class MgContentsRepositoryImpl implements MgContentsRepositoryCustom {
                     String startDate = (String) parametersMap.get("startDate");
                     String endDate = (String) parametersMap.get("endDate");
                     listSql = listSql +
-                            " AND (mg.cdate BETWEEN '" + startDate + "'" +
+                            " AND (mg.udate BETWEEN '" + startDate + "'" +
                             " AND  '" + endDate + "')";
                 }
             } else if (parametersMap.containsKey("startDate")) {
                 if (checkDate((String) parametersMap.get("startDate"))) {
                     String startDate = (String) parametersMap.get("startDate");
-                    listSql = listSql + " AND mg.cdate >= '" + startDate + "' ";
+                    listSql = listSql + " AND mg.udate >= '" + startDate + "' ";
                 }
             } else if (parametersMap.containsKey("endDate")) {
                 if (checkDate((String) parametersMap.get("endDate"))) {
                     String endDate = (String) parametersMap.get("endDate");
-                    listSql = listSql + " AND mg.cdate <= '" + endDate + "' ";
+                    listSql = listSql + " AND mg.udate <= '" + endDate + "' ";
                 }
             }
         }
@@ -156,6 +157,9 @@ public class MgContentsRepositoryImpl implements MgContentsRepositoryCustom {
             }
             if (obj[8] != null) {
                 mgContentsResult.setLikeCount(Integer.valueOf(obj[8].toString()));
+            }
+            if (obj[9] != null) {
+                mgContentsResult.setCdate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(obj[9].toString()));
             }
             mgContentsResult.setAppViewCount(findViewCount(mgContentsResult.getContentsId()));
             mgContentsResult.setWebViewCount(findWebViewCount(mgContentsResult.getContentsId()));

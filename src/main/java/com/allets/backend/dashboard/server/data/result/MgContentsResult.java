@@ -21,6 +21,7 @@ public class MgContentsResult {
     String  contentsType;
 
 
+    Date cdate;
     Date udate;
     String editorName;
     Integer uid;
@@ -137,19 +138,28 @@ public class MgContentsResult {
         this.commentCount = commentCount;
     }
 
+    public Date getCdate() {
+        return cdate;
+    }
+
+    public void setCdate(Date cdate) {
+        this.cdate = cdate;
+    }
+
     @Override
     public String toString() {
         return "MgContentsResult{" +
                 "contentsId=" + contentsId +
                 ", title='" + title + '\'' +
                 ", contentsType='" + contentsType + '\'' +
+                ", cdate=" + cdate +
                 ", udate=" + udate +
                 ", editorName='" + editorName + '\'' +
                 ", uid=" + uid +
                 ", webViewCount=" + webViewCount +
                 ", appViewCount=" + appViewCount +
                 ", likeCount=" + likeCount +
-                ", shareCount=" + shareCount +
+                ", shareCount='" + shareCount + '\'' +
                 ", bookmarkCount=" + bookmarkCount +
                 ", commentCount=" + commentCount +
                 '}';
